@@ -1,1 +1,1015 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Vanessa Cassarotti. Psicóloga em São Paulo (CRP 06/237547). Psicoterapia individual presencial e online, com abordagem fenomenológico-existencial." />
+  <title>Vanessa Cassarotti | Psicóloga Clínica</title>
 
+  <style>
+    @font-face {
+      font-family: "Bricolage Grotesque";
+      src: url("BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf") format("truetype");
+      font-display: swap;
+    }
+
+    @font-face {
+      font-family: "Avenir Next";
+      src: url("Avenir Next Regular.otf") format("opentype");
+      font-weight: 400;
+      font-display: swap;
+    }
+
+    :root {
+      --petroleo: #0a3845;
+      --petroleo-escuro: #042630;
+      --creme: #fff2de;
+      --azul-claro: #9ab5d2;
+      --verde: #90b7b2;
+      --corpo: "Avenir Next", Arial, sans-serif;
+      --titulo: "Bricolage Grotesque", Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--creme);
+      color: var(--petroleo-escuro);
+      font-family: var(--corpo);
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    a {
+      color: inherit;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.7;
+    }
+
+    .site-header {
+      align-items: center;
+      background: var(--petroleo);
+      display: flex;
+      height: 102px;
+      justify-content: space-between;
+      padding: 0 5.5vw;
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .brand {
+      align-items: center;
+      display: flex;
+      height: 72px;
+      overflow: hidden;
+      width: 82px;
+    }
+
+    .brand img {
+      height: 72px;
+      object-fit: cover;
+      object-position: center 31%;
+      width: 82px;
+    }
+
+    .menu {
+      align-items: center;
+      display: flex;
+      gap: clamp(16px, 2vw, 36px);
+    }
+
+    .menu a {
+      color: var(--creme);
+      font-size: .89rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .menu a:hover {
+      color: var(--verde);
+    }
+
+    .menu-toggle {
+      background: transparent;
+      border: 0;
+      color: var(--creme);
+      cursor: pointer;
+      display: none;
+      font: inherit;
+      font-size: .95rem;
+    }
+
+    .hero {
+      align-items: center;
+      display: grid;
+      gap: 6vw;
+      grid-template-columns: minmax(0, 1.05fr) minmax(360px, .75fr);
+      min-height: calc(100vh - 102px);
+      overflow: hidden;
+      padding: 9vw 8vw 7vw;
+      position: relative;
+    }
+
+    .hero-copy {
+      max-width: 760px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .kicker {
+      color: var(--petroleo);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .105em;
+      margin: 0 0 27px;
+      text-transform: uppercase;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: var(--titulo);
+      font-weight: 400;
+      letter-spacing: -.045em;
+    }
+
+    h1 {
+      font-size: clamp(3.1rem, 5vw, 5.6rem);
+      line-height: .99;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: clamp(2.3rem, 4vw, 4.3rem);
+      line-height: 1.03;
+      margin: 0 0 34px;
+    }
+
+    h3 {
+      font-size: 1.45rem;
+      line-height: 1.15;
+      margin: 0 0 14px;
+    }
+
+    .button {
+      align-items: center;
+      background: var(--petroleo);
+      border: 1px solid var(--petroleo);
+      border-radius: 999px;
+      color: var(--creme);
+      display: inline-flex;
+      font-size: .9rem;
+      font-weight: 700;
+      justify-content: center;
+      margin-top: 40px;
+      padding: 17px 25px;
+      text-align: center;
+      text-decoration: none;
+      transition: .2s ease;
+    }
+
+    .button:hover {
+      background: transparent;
+      color: var(--petroleo);
+    }
+
+    .button--light {
+      background: var(--creme);
+      color: var(--petroleo);
+    }
+
+    .button--light:hover {
+      background: var(--verde);
+      border-color: var(--verde);
+      color: var(--petroleo-escuro);
+    }
+
+    .hero-note {
+      font-size: .98rem;
+      margin: 50px 0 0;
+      max-width: 500px;
+    }
+
+    .scroll-note {
+      align-items: center;
+      display: flex;
+      font-size: .7rem;
+      gap: 11px;
+      letter-spacing: .13em;
+      margin-top: 70px;
+      text-transform: uppercase;
+    }
+
+    .scroll-note::before {
+      background: var(--petroleo);
+      border-radius: 50%;
+      content: "";
+      height: 10px;
+      width: 10px;
+    }
+
+    .hero-image {
+      min-height: 560px;
+      position: relative;
+    }
+
+    .hero-image::before {
+      background: var(--verde);
+      border-radius: 50%;
+      content: "";
+      height: 410px;
+      position: absolute;
+      right: -20px;
+      top: 25px;
+      width: 410px;
+    }
+
+    .hero-image::after {
+      background: var(--azul-claro);
+      border-radius: 50%;
+      bottom: -75px;
+      content: "";
+      height: 300px;
+      left: -75px;
+      position: absolute;
+      width: 300px;
+    }
+
+    .hero-image img {
+      height: min(38vw, 540px);
+      min-height: 480px;
+      object-fit: cover;
+      object-position: 50% 50%;
+      position: absolute;
+      right: 33px;
+      top: 0;
+      width: min(31vw, 425px);
+      z-index: 2;
+    }
+
+    .image-ring {
+      border: 2px solid var(--petroleo);
+      border-radius: 50%;
+      height: min(38vw, 555px);
+      position: absolute;
+      right: -26px;
+      top: -6px;
+      width: min(38vw, 555px);
+      z-index: 3;
+    }
+
+    section {
+      padding: 9vw 8vw;
+      position: relative;
+    }
+
+    .section-label {
+      color: var(--verde);
+      font-size: .78rem;
+      font-weight: 700;
+      letter-spacing: .1em;
+      margin: 0 0 20px;
+      text-transform: uppercase;
+    }
+
+    .for-you {
+      background: var(--petroleo);
+      color: var(--creme);
+    }
+
+    .for-you .section-label {
+      color: var(--verde);
+    }
+
+    .for-you h2 {
+      max-width: 760px;
+    }
+
+    .starting-points {
+      display: grid;
+      gap: 0;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 65px;
+    }
+
+    .starting-points article {
+      border-left: 1px solid rgba(255, 242, 222, .38);
+      min-height: 285px;
+      padding: 0 30px;
+    }
+
+    .starting-points article:first-child {
+      border-left: 0;
+      padding-left: 0;
+    }
+
+    .starting-points article:last-child {
+      padding-right: 0;
+    }
+
+    .starting-points p {
+      color: rgba(255, 242, 222, .87);
+      font-size: .95rem;
+      margin: 0;
+    }
+
+    .for-you .closing {
+      font-size: 1.16rem;
+      margin: 64px 0 0;
+      max-width: 800px;
+    }
+
+    .about {
+      display: grid;
+      gap: 8vw;
+      grid-template-columns: .75fr 1.25fr;
+    }
+
+    .about p {
+      margin: 0 0 22px;
+    }
+
+    .about-symbol {
+      align-items: center;
+      background: var(--azul-claro);
+      border-radius: 50%;
+      color: var(--petroleo);
+      display: flex;
+      font-family: var(--titulo);
+      font-size: clamp(6rem, 14vw, 13rem);
+      height: min(27vw, 390px);
+      justify-content: center;
+      line-height: 1;
+      position: sticky;
+      top: 160px;
+      width: min(27vw, 390px);
+    }
+
+    .therapy {
+      background: var(--azul-claro);
+    }
+
+    .therapy-content {
+      display: grid;
+      gap: 7vw;
+      grid-template-columns: .8fr 1.2fr;
+    }
+
+    .therapy-copy p {
+      margin: 0 0 22px;
+    }
+
+    .how-it-works {
+      background: var(--creme);
+    }
+
+    .details {
+      display: grid;
+      gap: 6vw;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .details p {
+      margin: 0 0 18px;
+    }
+
+    .details-card {
+      background: var(--petroleo-escuro);
+      color: var(--creme);
+      padding: 48px;
+    }
+
+    .details-card h2 {
+      font-size: clamp(2.2rem, 3.2vw, 3.7rem);
+    }
+
+    .details-card p {
+      color: rgba(255, 242, 222, .9);
+    }
+
+    .first-session {
+      background: var(--verde);
+    }
+
+    .steps {
+      display: grid;
+      gap: 18px;
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 52px;
+    }
+
+    .step {
+      border-top: 1px solid rgba(4, 38, 48, .45);
+      padding-top: 22px;
+    }
+
+    .step h3 {
+      font-size: 1.75rem;
+    }
+
+    .step p {
+      margin: 0;
+    }
+
+    .faq {
+      background: var(--creme);
+    }
+
+    .faq-list {
+      border-top: 1px solid rgba(4, 38, 48, .35);
+      margin: 45px auto 0;
+      max-width: 1020px;
+    }
+
+    details {
+      border-bottom: 1px solid rgba(4, 38, 48, .35);
+      padding: 22px 0;
+    }
+
+    summary {
+      cursor: pointer;
+      font-family: var(--titulo);
+      font-size: 1.35rem;
+      list-style: none;
+      padding-right: 45px;
+      position: relative;
+    }
+
+    summary::-webkit-details-marker {
+      display: none;
+    }
+
+    summary::after {
+      content: "+";
+      font-family: var(--corpo);
+      font-size: 1.7rem;
+      font-weight: 400;
+      position: absolute;
+      right: 3px;
+      top: -5px;
+    }
+
+    details[open] summary::after {
+      content: "−";
+    }
+
+    details p {
+      margin: 18px 45px 0 0;
+      max-width: 720px;
+    }
+
+    .contact {
+      background: var(--petroleo);
+      color: var(--creme);
+      display: grid;
+      gap: 7vw;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .contact .section-label {
+      color: var(--verde);
+    }
+
+    .contact h2 {
+      max-width: 630px;
+    }
+
+    .contact p {
+      color: rgba(255, 242, 222, .89);
+      margin: 0 0 22px;
+      max-width: 490px;
+    }
+
+    .contact-info {
+      align-self: end;
+      border-left: 1px solid rgba(255, 242, 222, .45);
+      padding-left: 42px;
+    }
+
+    .contact-info a {
+      color: var(--creme);
+      font-size: 1.15rem;
+      text-decoration: none;
+    }
+
+    .contact-info a:hover {
+      color: var(--verde);
+    }
+
+    .contact .button {
+      margin-top: 10px;
+    }
+
+    footer {
+      background: var(--petroleo-escuro);
+      color: rgba(255, 242, 222, .8);
+      padding: 34px 8vw 42px;
+    }
+
+    footer p {
+      font-size: .78rem;
+      line-height: 1.6;
+      margin: 0 0 10px;
+      max-width: 900px;
+    }
+
+    footer .crp {
+      color: var(--creme);
+    }
+
+    .whatsapp-fixed {
+      align-items: center;
+      background: var(--verde);
+      border-radius: 999px;
+      bottom: 24px;
+      color: var(--petroleo-escuro);
+      display: flex;
+      font-size: .82rem;
+      font-weight: 700;
+      gap: 9px;
+      padding: 14px 19px;
+      position: fixed;
+      right: 24px;
+      text-decoration: none;
+      z-index: 25;
+    }
+
+    .whatsapp-fixed::before {
+      border: 2px solid currentColor;
+      border-radius: 50%;
+      content: "";
+      height: 13px;
+      width: 13px;
+    }
+
+    @media (max-width: 1100px) {
+      .site-header {
+        height: 86px;
+      }
+
+      .menu {
+        gap: 14px;
+      }
+
+      .menu a {
+        font-size: .76rem;
+      }
+
+      .hero {
+        min-height: auto;
+      }
+
+      .starting-points article {
+        padding: 0 20px;
+      }
+    }
+
+    @media (max-width: 820px) {
+      .site-header {
+        height: 78px;
+        padding: 0 7vw;
+      }
+
+      .brand {
+        height: 58px;
+        width: 66px;
+      }
+
+      .brand img {
+        height: 58px;
+        width: 66px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .menu {
+        background: var(--petroleo);
+        display: none;
+        flex-direction: column;
+        gap: 20px;
+        left: 0;
+        padding: 28px 7vw 34px;
+        position: absolute;
+        right: 0;
+        top: 78px;
+      }
+
+      .menu.open {
+        display: flex;
+      }
+
+      .menu a {
+        font-size: 1rem;
+      }
+
+      .hero {
+        gap: 55px;
+        grid-template-columns: 1fr;
+        padding: 18vw 7vw;
+      }
+
+      .hero-image {
+        min-height: 485px;
+      }
+
+      .hero-image img {
+        height: 430px;
+        min-height: 0;
+        right: 9%;
+        width: 335px;
+      }
+
+      .image-ring {
+        height: 430px;
+        right: -5%;
+        width: 430px;
+      }
+
+      .starting-points,
+      .about,
+      .therapy-content,
+      .details,
+      .steps,
+      .contact {
+        grid-template-columns: 1fr;
+      }
+
+      .starting-points article,
+      .starting-points article:first-child {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 242, 222, .38);
+        min-height: auto;
+        padding: 26px 0;
+      }
+
+      .starting-points article:first-child {
+        border-top: 0;
+        padding-top: 0;
+      }
+
+      .about-symbol {
+        height: 220px;
+        position: static;
+        width: 220px;
+      }
+
+      .details-card {
+        padding: 34px 27px;
+      }
+
+      .contact-info {
+        border-left: 0;
+        border-top: 1px solid rgba(255, 242, 222, .45);
+        padding: 34px 0 0;
+      }
+
+      section {
+        padding: 19vw 7vw;
+      }
+
+      .whatsapp-fixed {
+        bottom: 15px;
+        right: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      h1 {
+        font-size: 2.95rem;
+      }
+
+      h2 {
+        font-size: 2.4rem;
+      }
+
+      .hero-image {
+        min-height: 415px;
+      }
+
+      .hero-image img {
+        height: 375px;
+        right: 0;
+        width: 285px;
+      }
+
+      .image-ring {
+        height: 375px;
+        right: -17%;
+        width: 375px;
+      }
+
+      .hero-image::before {
+        height: 270px;
+        width: 270px;
+      }
+
+      .hero-image::after {
+        height: 210px;
+        width: 210px;
+      }
+
+      .button {
+        font-size: .8rem;
+        padding: 15px 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Início">
+      <img src="logovanessa.png" alt="Vanessa Cassarotti" />
+    </a>
+
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="menu">
+      Menu
+    </button>
+
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="#para-quem-e">Para quem é</a>
+      <a href="#sobre-mim">Sobre mim</a>
+      <a href="#psicoterapia">A psicoterapia</a>
+      <a href="#primeira-consulta">Primeira consulta</a>
+      <a href="#perguntas-frequentes">Perguntas frequentes</a>
+      <a href="#contato">Contato</a>
+    </nav>
+  </header>
+
+  <main id="inicio">
+    <section class="hero" aria-labelledby="titulo-principal">
+      <div class="hero-copy">
+        <p class="kicker">Vanessa Cassarotti. Psicóloga em São Paulo (CRP 06/237547).</p>
+
+        <h1 id="titulo-principal">
+          Psicoterapia para quem quer entender as escolhas que fez, e as que ainda pode fazer.
+        </h1>
+
+        <a class="button" href="https://wa.me/5511981220809" target="_blank" rel="noopener">
+          Marcar uma conversa inicial e sem compromisso pelo WhatsApp
+        </a>
+
+        <p class="hero-note">
+          Psicoterapia individual presencial e online, com abordagem fenomenológico-existencial.
+        </p>
+
+        <p class="scroll-note">Role para conhecer</p>
+      </div>
+
+      <div class="hero-image">
+        <img src="fotocapa.HEIF" alt="Vanessa Cassarotti" />
+        <span class="image-ring" aria-hidden="true"></span>
+      </div>
+    </section>
+
+    <section class="for-you" id="para-quem-e" aria-labelledby="para-quem-titulo">
+      <p class="section-label">Para quem é</p>
+
+      <h2 id="para-quem-titulo">
+        Cada pessoa chega à terapia por um caminho próprio. Estes são alguns dos pontos de partida que mais escuto.
+      </h2>
+
+      <div class="starting-points">
+        <article>
+          <h3>Por fora está tudo em ordem, e por dentro algo não encaixa.</h3>
+          <p>Trabalho, família e rotina funcionam, e ainda assim existe uma pergunta que não sai do lugar.</p>
+        </article>
+
+        <article>
+          <h3>Uma decisão adiada por tempo demais.</h3>
+          <p>Carreira, relação, mudança de cidade ou de vida. Muitas vezes a dificuldade está menos em escolher e mais em assumir o que a escolha implica.</p>
+        </article>
+
+        <article>
+          <h3>Recomeços em qualquer idade, inclusive na maturidade.</h3>
+          <p>Quando o roteiro conhecido acaba (uma separação, uma aposentadoria, filhos que saem de casa, uma carreira que já não faz sentido), abre-se um espaço desconfortável e cheio de possibilidades.</p>
+        </article>
+
+        <article>
+          <h3>A sensação de viver no automático.</h3>
+          <p>Um cansaço que o descanso não resolve, entre o tédio e a angústia, com a impressão de que a vida está acontecendo ao lado.</p>
+        </article>
+
+        <article>
+          <h3>Uma relação difícil com a comida e com o corpo.</h3>
+          <p>Trabalhada sem moralismo e sem a lógica de certo e errado, olhando para o sentido que comer, controlar ou evitar tem na sua história.</p>
+        </article>
+
+        <article>
+          <h3>Padrões que se repetem nos vínculos.</h3>
+          <p>Nas relações de família, de casal e de trabalho, os mesmos enredos costumam reaparecer com personagens diferentes.</p>
+        </article>
+
+        <article>
+          <h3>Perdas e mudanças de papel.</h3>
+          <p>Luto, separação, diagnóstico de alguém querido, o fim de uma fase. A finitude também faz parte do que se pode conversar aqui.</p>
+        </article>
+      </div>
+
+      <p class="closing">
+        Se você se descreve como ansioso, esgotado ou sem rumo, esse também é um bom ponto de partida. O que está acontecendo com você se entende em conversa, e nenhuma lista dá conta disso.
+      </p>
+    </section>
+
+    <section class="about" id="sobre-mim" aria-labelledby="sobre-titulo">
+      <div>
+        <p class="section-label">Sobre mim</p>
+        <div class="about-symbol" aria-hidden="true">VC</div>
+      </div>
+
+      <div>
+        <h2 id="sobre-titulo">
+          Sou psicóloga (CRP 06/237547), com pós-graduação em psicologia fenomenológico-existencial.
+        </h2>
+
+        <p>Atendo adolescentes, adultos e pessoas na maturidade em consultório, em São Paulo, e online.</p>
+
+        <p>Antes da psicologia, fui nutricionista, tive um restaurante próprio e passei pelo agronegócio, em uma empresa familiar. Essas profissões me ajudaram a ir aprendendo a sustentar escolhas e as consequências que vêm com elas, e a conviver com o que se segue depois que se decide. Em cada mudança de caminho levei comigo o que já tinha vivido, o que deu certo e o que deu errado, e é com essa bagagem que hoje escuto quem me procura. Ninguém chega totalmente pronto a uma escolha; seguimos em construção, decidindo com o que temos em mãos.</p>
+
+        <p>Levo esse percurso ao consultório como repertório. Conheço de perto o cansaço de quem sustenta muita coisa, a dúvida de quem pensa em mudar depois de muito tempo em uma direção e o desconforto de perceber que a vida ficou no piloto automático.</p>
+
+        <p>Sou mãe de duas filhas, e a convivência com elas segue sendo uma das minhas melhores escolas sobre vínculo, liberdade e cuidado.</p>
+      </div>
+    </section>
+
+    <section class="therapy" id="psicoterapia" aria-labelledby="psicoterapia-titulo">
+      <div class="therapy-content">
+        <div>
+          <p class="section-label">A psicoterapia</p>
+          <h2 id="psicoterapia-titulo">Como enxergo a psicoterapia</h2>
+        </div>
+
+        <div class="therapy-copy">
+          <p>Minha formação é fenomenológico-existencial. Sei que o nome parece complicado, mas o que ele descreve está bem perto da vida cotidiana: entendo cada pessoa como alguém que existe sempre inserido no mundo em que vive, em relação constante consigo mesma e com os outros, e o trabalho começa pelo que você vive e pelo sentido que essa experiência tem para você.</p>
+
+          <p>Essa perspectiva leva a sério a liberdade e também o seu peso. Uma parte considerável da angústia nasce das escolhas que fazemos, das que adiamos e das que dizemos não existir. Olhar para isso com calma, sem culpa e sem pressa, costuma abrir possibilidades que estavam encobertas pela frase "eu não tenho escolha".</p>
+
+          <p>Ela também entende que ninguém existe isolado. Família, casal, trabalho e amizades formam o campo onde nossos modos de agir se constroem e se repetem, e olhar para esses vínculos ajuda a perceber o que é seu, o que veio herdado e o que pode ser reorganizado.</p>
+
+          <p>O sofrimento, nessa visão, carrega informação sobre o que importa para você (relações, escolhas, perdas, liberdade, finitude, sentido) e merece ser escutado com atenção. Quando o caso pede, converso com a pessoa sobre a avaliação de um psiquiatra e faço o encaminhamento, porque cuidar bem às vezes exige mais de um profissional.</p>
+
+          <p>Psicoterapia é uma construção feita a dois: não há prazo específico e o ritmo é definido pelo que a sua vida pede.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="how-it-works" aria-labelledby="como-trabalho-titulo">
+      <div class="details">
+        <div>
+          <p class="section-label">A psicoterapia</p>
+          <h2 id="como-trabalho-titulo">Como trabalho</h2>
+
+          <p>Atendo em sessões individuais de 50 minutos, presencialmente em Pinheiros, em São Paulo, ou online, por videochamada, de onde você estiver. O ponto de partida costuma ser um encontro por semana, e a frequência é combinada em conjunto e revista ao longo do processo.</p>
+
+          <p>No atendimento online, o formato, a duração e o sigilo são os mesmos do presencial. Você só precisa de um lugar reservado, uma conexão estável e fones de ouvido, se possível.</p>
+
+          <p>Tudo o que é conversado nas sessões é sigiloso, conforme o Código de Ética Profissional do Psicólogo.</p>
+        </div>
+
+        <div class="details-card">
+          <p class="section-label">A psicoterapia</p>
+          <h2>Primeira consulta</h2>
+
+          <p>Como funciona a primeira consulta de psicoterapia: o que acontece, o que levar e como decidir se quer continuar.</p>
+
+          <p>Para quem nunca fez terapia, o começo costuma parecer mais misterioso do que é.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="first-session" id="primeira-consulta" aria-labelledby="primeira-titulo">
+      <p class="section-label">Primeira consulta</p>
+
+      <h2 id="primeira-titulo">
+        Como funciona a primeira consulta de psicoterapia: o que acontece, o que levar e como decidir se quer continuar.
+      </h2>
+
+      <div class="steps">
+        <article class="step">
+          <h3>Antes.</h3>
+          <p>Você me escreve pelo WhatsApp, com uma mensagem curta, e combinamos dia, horário e modalidade.</p>
+        </article>
+
+        <article class="step">
+          <h3>Durante.</h3>
+          <p>A primeira sessão é uma conversa sobre o que trouxe você até aqui. Não precisa chegar com o assunto organizado, nem saber nomear o que sente, nem preparar nada. Você fala no ritmo que puder, e ninguém aqui está julgando o que você diz.</p>
+        </article>
+
+        <article class="step">
+          <h3>Depois.</h3>
+          <p>No final, conversamos sobre como seria o trabalho (frequência, formato, combinados de horário, faltas e remarcações). A decisão de continuar é sua, e você pode levar o tempo que precisar para pensar; se quiser seguir comigo, combinamos os próximos encontros, e se preferir não seguir, tudo bem também.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="faq" id="perguntas-frequentes" aria-labelledby="faq-titulo">
+      <p class="section-label">Perguntas frequentes</p>
+      <h2 id="faq-titulo">Perguntas frequentes</h2>
+
+      <div class="faq-list">
+        <details>
+          <summary>Preciso ter um problema definido para começar?</summary>
+          <p>Não. Muita gente chega com uma inquietação difícil de nomear, e nomeá-la já é parte do trabalho.</p>
+        </details>
+
+        <details>
+          <summary>Como sei se é hora de procurar terapia?</summary>
+          <p>Não existe um critério único. Se uma questão está ocupando espaço demais na sua cabeça, ou se você sente que precisa pensar em voz alta com alguém preparado para escutar, já vale uma conversa.</p>
+        </details>
+
+        <details>
+          <summary>Quanto tempo dura a terapia?</summary>
+          <p>Não há prazo padrão. Depende do que você busca e do ritmo do processo, e revisamos isso juntos periodicamente.</p>
+        </details>
+
+        <details>
+          <summary>Terapia online funciona para mim?</summary>
+          <p>Para muitas pessoas, o atendimento online é uma escolha prática e confortável, e mantém as mesmas características do presencial. Podemos combinar na primeira conversa qual formato faz mais sentido para você.</p>
+        </details>
+
+        <details>
+          <summary>Você indica ou receita medicação?</summary>
+          <p>Não. Medicação é competência do psiquiatra. Quando entendo que pode ser útil, conversamos e faço o encaminhamento.</p>
+        </details>
+
+        <details>
+          <summary>O que é a abordagem fenomenológico-existencial?</summary>
+          <p>É uma forma de fazer psicologia que parte da experiência concreta da pessoa e do sentido que ela dá ao que vive, com atenção especial às escolhas, à liberdade e à responsabilidade. Em vez de encaixar você num rótulo, buscamos compreender como é a sua vida do jeito que você a vive, no mundo e nas relações em que ela acontece.</p>
+        </details>
+
+        <details>
+          <summary>Tenho dificuldade de falar sobre mim. Isso é um problema?</summary>
+          <p>Muita gente começa assim. A conversa vai se construindo com o tempo, e o silêncio também é bem-vindo nas sessões.</p>
+        </details>
+
+        <details>
+          <summary>O que é sigilo?</summary>
+          <p>É o dever ético de não revelar o que é dito em sessão. Ou seja, é o compromisso de que o que você conta nas sessões fica entre nós. Não compartilho o conteúdo dos atendimentos com familiares, empregadores, escolas ou qualquer outra pessoa sem a sua autorização, e esse dever continua valendo depois que o acompanhamento termina. Ele vem do Código de Ética Profissional do Psicólogo.</p>
+        </details>
+      </div>
+    </section>
+
+    <section class="contact" id="contato" aria-labelledby="contato-titulo">
+      <div>
+        <p class="section-label">Contato</p>
+
+        <h2 id="contato-titulo">
+          Agende uma conversa inicial comigo. Atendimento presencial em São Paulo e online.
+        </h2>
+
+        <a class="button button--light" href="https://wa.me/5511981220809" target="_blank" rel="noopener">
+          Marcar uma conversa inicial e sem compromisso pelo WhatsApp
+        </a>
+      </div>
+
+      <div class="contact-info">
+        <p>Online: por videochamada, de qualquer lugar</p>
+
+        <p>Valores e horários disponíveis são conversados já no primeiro contato, com calma e sem compromisso, e qualquer dúvida pode ser retomada na primeira sessão.</p>
+
+        <a href="https://wa.me/5511981220809" target="_blank" rel="noopener">
+          WhatsApp: +5511981220809
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p class="crp">Vanessa Cassarotti, Psicóloga · CRP 06/237547</p>
+    <p>Este site tem caráter informativo e não substitui atendimento psicológico. Em situação de crise, procure o CVV (188, 24 horas) ou o serviço de urgência mais próximo.</p>
+  </footer>
+
+  <a class="whatsapp-fixed" href="https://wa.me/5511981220809" target="_blank" rel="noopener">
+    Agende sua avaliação
+  </a>
+
+  <script>
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
+
+    toggle.addEventListener("click", () => {
+      const open = menu.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open);
+    });
+
+    menu.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        menu.classList.remove("open");
+        toggle.setAttribute("aria-expanded", "false");
+      });
+    });
+  </script>
+</body>
+</html>
