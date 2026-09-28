@@ -55,8 +55,8 @@
     }
 
     h1 {
-      font-size: clamp(3.2rem, 5.2vw, 5.8rem);
-      line-height: 0.98;
+      font-size: clamp(2.8rem, 3.9vw, 4.65rem);
+      line-height: 1;
       margin: 0;
     }
 
@@ -82,14 +82,14 @@
       background: var(--petroleo);
       display: flex;
       justify-content: space-between;
-      min-height: 160px;
-      padding: 10px 7vw;
+      min-height: 145px;
+      padding: 8px 7vw;
     }
 
     .brand {
       display: block;
-      height: 140px;
-      width: 270px;
+      height: 130px;
+      width: 300px;
     }
 
     .brand img {
@@ -135,26 +135,29 @@
     }
 
     .hero {
-      align-items: center;
+      align-items: start;
       display: grid;
-      gap: 8vw;
-      grid-template-columns: 1.08fr 0.72fr;
-      min-height: calc(100vh - 160px);
+      gap: 7vw;
+      grid-template-columns: 1.08fr 0.68fr;
+      min-height: calc(100vh - 145px);
       overflow: hidden;
-      padding: 7vw 8vw;
+      padding: 3.8vw 8vw 2.5vw;
       position: relative;
     }
 
     .hero::after {
-      background: url("Prancheta 1VC10.png") center / cover;
-      bottom: -190px;
+      background-image: url("Prancheta 1VC10.png");
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+      bottom: 0;
       content: "";
-      height: 530px;
-      opacity: 0.045;
+      height: 88%;
+      opacity: 0.16;
       pointer-events: none;
       position: absolute;
-      right: -170px;
-      width: 530px;
+      right: 0;
+      width: 47%;
     }
 
     .hero-copy,
@@ -164,15 +167,34 @@
     }
 
     .intro {
-      font-size: 1.08rem;
-      margin: 30px 0 0;
-      max-width: 580px;
+      font-size: 1rem;
+      margin: 22px 0 0;
+      max-width: 560px;
+    }
+
+    .hero .button {
+      background: var(--petroleo);
+      border: 1px solid var(--petroleo);
+      border-radius: 999px;
+      color: var(--creme);
+      display: inline-block;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-top: 28px;
+      padding: 16px 23px;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .hero .button:hover {
+      background: transparent;
+      color: var(--petroleo);
     }
 
     .portrait {
       justify-self: end;
       margin: 0;
-      width: min(31vw, 400px);
+      width: min(25vw, 340px);
     }
 
     .portrait img {
@@ -327,7 +349,7 @@
 
       .brand {
         height: 105px;
-        width: 205px;
+        width: 230px;
       }
 
       .menu {
@@ -355,7 +377,7 @@
 
       .brand {
         height: 78px;
-        width: 155px;
+        width: 170px;
       }
 
       .menu-toggle {
@@ -387,13 +409,19 @@
 
       .hero {
         grid-template-columns: 1fr;
-        padding: 16vw 8vw;
+        padding: 13vw 8vw 10vw;
+      }
+
+      .hero::after {
+        height: 46%;
+        opacity: 0.11;
+        width: 78%;
       }
 
       .portrait {
         justify-self: start;
-        margin-top: 12px;
-        width: min(76vw, 360px);
+        margin-top: 10px;
+        width: min(68vw, 320px);
       }
 
       section {
@@ -416,7 +444,7 @@
       }
 
       h1 {
-        font-size: 3.3rem;
+        font-size: 3.15rem;
       }
     }
   </style>
@@ -446,6 +474,10 @@
         <h1>Psicoterapia para quem quer entender as escolhas que fez, e as que ainda pode fazer.</h1>
 
         <p class="intro">Psicoterapia individual presencial e online, com abordagem fenomenológico-existencial.</p>
+
+        <a class="button" href="https://wa.me/5511981220809" target="_blank" rel="noopener">
+          Marcar uma conversa inicial e sem compromisso pelo WhatsApp
+        </a>
       </div>
 
       <figure class="portrait reveal">
