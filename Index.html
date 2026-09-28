@@ -3,20 +3,17 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vanessa Cassarotti, Psicóloga em São Paulo.">
   <title>Vanessa Cassarotti | Psicóloga Clínica</title>
 
   <style>
     @font-face {
       font-family: "Bricolage Grotesque";
       src: url("BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf") format("truetype");
-      font-display: swap;
     }
 
     @font-face {
       font-family: "Avenir Next";
       src: url("Avenir Next Regular.otf") format("opentype");
-      font-display: swap;
     }
 
     :root {
@@ -57,7 +54,7 @@
     .header-content {
       width: 100%;
       max-width: 1440px;
-      margin: 0 auto;
+      margin: auto;
       display: flex;
       align-items: center;
       justify-content: space-between;
@@ -81,9 +78,8 @@
 
     .menu {
       display: flex;
-      align-items: center;
-      justify-content: flex-end;
       flex-wrap: wrap;
+      justify-content: flex-end;
       gap: clamp(18px, 2.4vw, 40px);
     }
 
@@ -91,10 +87,7 @@
       color: var(--creme);
       font-size: 14px;
       font-weight: 700;
-      transition: opacity 0.2s ease;
     }
-
-    .menu a:hover { opacity: 0.7; }
 
     .hero {
       min-height: calc(100vh - 132px);
@@ -109,7 +102,7 @@
     .hero-inner {
       width: 100%;
       max-width: 1440px;
-      margin: 0 auto;
+      margin: auto;
       padding: 48px clamp(28px, 7vw, 112px) 44px;
       display: grid;
       grid-template-columns: minmax(0, 1.13fr) minmax(270px, 0.66fr);
@@ -136,7 +129,6 @@
     h1 {
       max-width: 690px;
       margin: 0;
-      color: var(--petroleo-escuro);
       font-size: clamp(42px, 4.25vw, 69px);
       line-height: 0.97;
     }
@@ -156,8 +148,7 @@
       border-radius: 999px;
       font-size: 14px;
       font-weight: 700;
-      line-height: 1.2;
-      transition: transform 0.2s ease;
+      transition: transform .2s ease;
     }
 
     .primary-button {
@@ -165,7 +156,6 @@
       padding: 14px 25px;
       background: var(--petroleo);
       color: var(--creme);
-      text-align: center;
     }
 
     .primary-button:hover, .top-button:hover { transform: translateY(-2px); }
@@ -192,16 +182,15 @@
       pointer-events: none;
     }
 
-    .section {
-      padding: clamp(80px, 10vw, 140px) clamp(28px, 7vw, 112px);
-    }
+    .section { padding: clamp(80px, 10vw, 140px) clamp(28px, 7vw, 112px); }
 
     .section-inner {
       width: 100%;
       max-width: 1440px;
-      margin: 0 auto;
+      margin: auto;
     }
 
+    /* METODOLOGIA */
     .methodology {
       background: var(--petroleo);
       color: var(--creme);
@@ -209,9 +198,14 @@
 
     .methodology-grid {
       display: grid;
-      grid-template-columns: minmax(250px, 0.65fr) minmax(500px, 1.35fr);
-      gap: clamp(55px, 9vw, 145px);
-      align-items: start;
+      grid-template-columns: minmax(260px, .65fr) minmax(400px, 1.2fr);
+      gap: clamp(55px, 10vw, 160px);
+      align-items: stretch;
+    }
+
+    .methodology-left {
+      display: flex;
+      flex-direction: column;
     }
 
     .methodology .section-kicker {
@@ -224,39 +218,29 @@
       margin: 0;
       color: var(--creme);
       font-size: clamp(45px, 4.5vw, 68px);
-      line-height: 0.95;
+      line-height: .95;
     }
-
-    .methodology-copy > p {
-      margin: 0;
-      color: rgba(255, 242, 222, 0.87);
-      font-size: 17px;
-      line-height: 1.65;
-    }
-
-    .methodology-lower {
-      display: grid;
-      grid-template-columns: minmax(0, 1fr) minmax(190px, 270px);
-      gap: clamp(28px, 4vw, 62px);
-      align-items: start;
-      margin-top: 25px;
-    }
-
-    .methodology-rest p {
-      margin: 0 0 25px;
-      color: rgba(255, 242, 222, 0.87);
-      font-size: 17px;
-      line-height: 1.65;
-    }
-
-    .methodology-rest p:last-child { margin-bottom: 0; }
 
     .methodology-image {
       width: 100%;
+      min-height: 300px;
+      flex: 1;
+      margin-top: 38px;
       display: block;
-      height: auto;
+      object-fit: cover;
+      object-position: center;
     }
 
+    .methodology-copy p {
+      margin: 0 0 25px;
+      color: rgba(255, 242, 222, .87);
+      font-size: 17px;
+      line-height: 1.65;
+    }
+
+    .methodology-copy p:last-child { margin-bottom: 0; }
+
+    /* PARA QUEM É */
     .audience {
       background: var(--verde);
       color: var(--petroleo-escuro);
@@ -266,21 +250,20 @@
 
     .section-intro .section-kicker {
       margin-bottom: 22px;
-      color: rgba(4, 38, 48, 0.65);
+      color: rgba(4, 38, 48, .65);
     }
 
     .section-intro h2 {
       max-width: 790px;
       margin: 0 0 18px;
-      color: var(--petroleo-escuro);
       font-size: clamp(37px, 4vw, 62px);
-      line-height: 0.98;
+      line-height: .98;
     }
 
     .audience-lead {
       max-width: 590px;
       margin: 0;
-      color: rgba(4, 38, 48, 0.78);
+      color: rgba(4, 38, 48, .78);
       font-size: 17px;
       line-height: 1.6;
     }
@@ -293,14 +276,13 @@
 
     .audience-card h3 {
       margin: 0 0 14px;
-      color: var(--petroleo-escuro);
       font-size: 26px;
       line-height: 1.03;
     }
 
     .audience-card p {
       margin: 0;
-      color: rgba(4, 38, 48, 0.78);
+      color: rgba(4, 38, 48, .78);
       font-size: 15px;
       line-height: 1.6;
     }
@@ -308,11 +290,11 @@
     .audience-closing {
       max-width: 790px;
       margin: 72px 0 0;
-      color: var(--petroleo-escuro);
       font-size: 18px;
       line-height: 1.65;
     }
 
+    /* PRIMEIRA CONSULTA */
     .first-session {
       background: var(--creme);
       color: var(--petroleo-escuro);
@@ -320,14 +302,14 @@
 
     .first-session .section-kicker {
       margin-bottom: 26px;
-      color: rgba(4, 38, 48, 0.65);
+      color: rgba(4, 38, 48, .65);
     }
 
     .first-session h2 {
       max-width: 960px;
       margin: 0 0 62px;
       font-size: clamp(37px, 4vw, 62px);
-      line-height: 0.98;
+      line-height: .98;
     }
 
     .consultation-grid {
@@ -348,6 +330,7 @@
       line-height: 1.65;
     }
 
+    /* CONTATO */
     .contact {
       padding: clamp(78px, 9vw, 122px) 0 0;
       background: var(--petroleo);
@@ -357,15 +340,14 @@
     .contact-inner {
       width: 100%;
       max-width: 1440px;
-      margin: 0 auto;
+      margin: auto;
       padding: 0 clamp(28px, 7vw, 112px);
     }
 
     .contact-columns {
       display: grid;
-      grid-template-columns: minmax(280px, 0.8fr) minmax(360px, 1fr);
+      grid-template-columns: minmax(280px, .8fr) minmax(360px, 1fr);
       gap: clamp(60px, 11vw, 180px);
-      align-items: start;
     }
 
     .contact-kicker, .work-kicker { color: var(--verde); }
@@ -374,15 +356,14 @@
       max-width: 480px;
       margin: 34px 0 22px;
       font-size: clamp(48px, 4.8vw, 72px);
-      line-height: 0.92;
+      line-height: .92;
     }
 
     .contact-subtitle {
       margin: 0 0 28px;
-      color: rgba(255, 242, 222, 0.82);
+      color: rgba(255, 242, 222, .82);
       font-size: 17px;
       font-weight: 700;
-      line-height: 1.5;
     }
 
     .top-button {
@@ -396,7 +377,7 @@
 
     .work-copy p {
       margin: 0 0 22px;
-      color: rgba(255, 242, 222, 0.87);
+      color: rgba(255, 242, 222, .87);
       font-size: 16px;
       line-height: 1.62;
     }
@@ -418,7 +399,7 @@
     .site-footer-content {
       width: 100%;
       max-width: 1440px;
-      margin: 0 auto;
+      margin: auto;
     }
 
     .site-footer p {
@@ -432,7 +413,7 @@
     .reveal {
       opacity: 0;
       transform: translateY(20px);
-      transition: opacity 0.75s ease, transform 0.75s ease;
+      transition: opacity .75s ease, transform .75s ease;
     }
 
     .reveal.visible {
@@ -440,25 +421,17 @@
       transform: translateY(0);
     }
 
-    @media (max-width: 1050px) {
+    @media (max-width: 1000px) {
       .audience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
       .methodology-grid {
-        grid-template-columns: minmax(210px, 0.55fr) minmax(430px, 1.3fr);
-        gap: 50px;
-      }
-
-      .methodology-lower {
-        grid-template-columns: minmax(0, 1fr) 210px;
-        gap: 28px;
+        grid-template-columns: minmax(210px, .65fr) minmax(390px, 1.2fr);
+        gap: 48px;
       }
     }
 
     @media (max-width: 760px) {
-      .site-header {
-        padding-top: 14px;
-        padding-bottom: 14px;
-      }
+      .site-header { padding-top: 14px; padding-bottom: 14px; }
 
       .header-content {
         flex-direction: column;
@@ -466,26 +439,10 @@
         gap: 16px;
       }
 
-      .brand {
-        width: 128px;
-        height: 62px;
-      }
-
-      .brand img {
-        width: 160px;
-        transform: translate(-16px, -66px);
-      }
-
-      .menu {
-        justify-content: flex-start;
-        gap: 13px 20px;
-      }
-
+      .menu { justify-content: flex-start; gap: 13px 20px; }
       .menu a { font-size: 12px; }
 
-      .hero {
-        min-height: auto;
-      }
+      .hero { min-height: auto; }
 
       .hero-inner {
         grid-template-columns: 1fr;
@@ -514,20 +471,14 @@
         gap: 38px;
       }
 
-      .methodology-lower {
-        grid-template-columns: 1fr;
-        gap: 28px;
-      }
-
       .methodology-image {
-        max-width: 330px;
+        max-height: none;
+        min-height: 0;
       }
 
       .section-intro { margin-bottom: 48px; }
       .first-session h2 { margin-bottom: 48px; }
-      .contact-title { margin-top: 28px; }
       .work-copy { margin-top: 28px; }
-      .site-footer { margin-top: 50px; }
     }
   </style>
 </head>
@@ -539,7 +490,7 @@
         <img src="logovanessa.png" alt="Vanessa Cassarotti">
       </a>
 
-      <nav class="menu" aria-label="Menu principal">
+      <nav class="menu">
         <a href="#metodologia">Metodologia</a>
         <a href="#para-quem-e">Para quem é</a>
         <a href="#primeira-consulta">Primeira consulta</a>
@@ -571,27 +522,22 @@
 
     <section class="section methodology" id="metodologia">
       <div class="section-inner methodology-grid">
-        <div class="reveal">
+        <div class="methodology-left reveal">
           <p class="section-kicker">Metodologia</p>
           <h2>Como enxergo a psicoterapia</h2>
+          <img class="methodology-image" src="metodologia.jpg" alt="Vanessa Cassarotti">
         </div>
 
         <div class="methodology-copy reveal">
           <p>Minha formação é fenomenológico-existencial. Sei que o nome parece complicado, mas o que ele descreve está bem perto da vida cotidiana: entendo cada pessoa como alguém que existe sempre inserido no mundo em que vive, em relação constante consigo mesma e com os outros, e o trabalho começa pelo que você vive e pelo sentido que essa experiência tem para você.</p>
 
-          <div class="methodology-lower">
-            <div class="methodology-rest">
-              <p>Essa perspectiva leva a sério a liberdade e também o seu peso. Uma parte considerável da angústia nasce das escolhas que fazemos, das que adiamos e das que dizemos não existir. Olhar para isso com calma, sem culpa e sem pressa, costuma abrir possibilidades que estavam encobertas pela frase "eu não tenho escolha".</p>
+          <p>Essa perspectiva leva a sério a liberdade e também o seu peso. Uma parte considerável da angústia nasce das escolhas que fazemos, das que adiamos e das que dizemos não existir. Olhar para isso com calma, sem culpa e sem pressa, costuma abrir possibilidades que estavam encobertas pela frase "eu não tenho escolha".</p>
 
-              <p>Ela também entende que ninguém existe isolado. Família, casal, trabalho e amizades formam o campo onde nossos modos de agir se constroem e se repetem, e olhar para esses vínculos ajuda a perceber o que é seu, o que veio herdado e o que pode ser reorganizado.</p>
+          <p>Ela também entende que ninguém existe isolado. Família, casal, trabalho e amizades formam o campo onde nossos modos de agir se constroem e se repetem, e olhar para esses vínculos ajuda a perceber o que é seu, o que veio herdado e o que pode ser reorganizado.</p>
 
-              <p>O sofrimento, nessa visão, carrega informação sobre o que importa para você (relações, escolhas, perdas, liberdade, finitude, sentido) e merece ser escutado com atenção. Quando o caso pede, converso com a pessoa sobre a avaliação de um psiquiatra e faço o encaminhamento, porque cuidar bem às vezes exige mais de um profissional.</p>
+          <p>O sofrimento, nessa visão, carrega informação sobre o que importa para você (relações, escolhas, perdas, liberdade, finitude, sentido) e merece ser escutado com atenção. Quando o caso pede, converso com a pessoa sobre a avaliação de um psiquiatra e faço o encaminhamento, porque cuidar bem às vezes exige mais de um profissional.</p>
 
-              <p>Psicoterapia é uma construção feita a dois: não há prazo específico e o ritmo é definido pelo que a sua vida pede.</p>
-            </div>
-
-            <img class="methodology-image" src="metodologia.jpg" alt="Vanessa Cassarotti">
-          </div>
+          <p>Psicoterapia é uma construção feita a dois: não há prazo específico e o ritmo é definido pelo que a sua vida pede.</p>
         </div>
       </div>
     </section>
