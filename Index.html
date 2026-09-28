@@ -23,6 +23,7 @@
       --petroleo-escuro: #042630;
       --creme: #fff2de;
       --verde: #90b7b2;
+      --azul: #9ab5d2;
     }
 
     * {
@@ -41,9 +42,39 @@
       overflow-x: hidden;
     }
 
-    button,
     a {
-      font: inherit;
+      color: inherit;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Bricolage Grotesque", Arial, sans-serif;
+      font-weight: 400;
+      letter-spacing: -0.045em;
+    }
+
+    h1 {
+      font-size: clamp(3.2rem, 5.2vw, 5.8rem);
+      line-height: 0.98;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: clamp(2.5rem, 4vw, 4.5rem);
+      line-height: 1;
+      margin: 0;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      line-height: 1.12;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.65;
     }
 
     .site-header {
@@ -51,28 +82,27 @@
       background: var(--petroleo);
       display: flex;
       justify-content: space-between;
-      min-height: 140px;
-      padding: 12px 7vw;
+      min-height: 160px;
+      padding: 10px 7vw;
     }
 
     .brand {
       display: block;
-      height: 116px;
-      overflow: hidden;
-      width: 250px;
+      height: 140px;
+      width: 270px;
     }
 
     .brand img {
+      display: block;
       height: 100%;
-      object-fit: cover;
-      object-position: center 62%;
+      object-fit: contain;
       width: 100%;
     }
 
     .menu {
       align-items: center;
       display: flex;
-      gap: clamp(18px, 2.6vw, 42px);
+      gap: clamp(18px, 2.5vw, 42px);
     }
 
     .menu a {
@@ -92,38 +122,7 @@
       color: var(--creme);
       cursor: pointer;
       display: none;
-      font-size: 0.92rem;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Bricolage Grotesque", Arial, sans-serif;
-      font-weight: 400;
-      letter-spacing: -0.045em;
-    }
-
-    h1 {
-      font-size: clamp(3.2rem, 5.2vw, 5.8rem);
-      line-height: 0.98;
-      margin: 0;
-    }
-
-    h2 {
-      font-size: clamp(2.4rem, 4vw, 4.5rem);
-      line-height: 1;
-      margin: 0;
-    }
-
-    h3 {
-      font-size: 1.55rem;
-      line-height: 1.08;
-      margin: 0;
-    }
-
-    p {
-      font-size: 1rem;
-      line-height: 1.65;
+      font: inherit;
     }
 
     .eyebrow {
@@ -135,16 +134,12 @@
       text-transform: uppercase;
     }
 
-    .home {
-      display: block;
-    }
-
     .hero {
       align-items: center;
       display: grid;
       gap: 8vw;
       grid-template-columns: 1.08fr 0.72fr;
-      min-height: calc(100vh - 140px);
+      min-height: calc(100vh - 160px);
       overflow: hidden;
       padding: 7vw 8vw;
       position: relative;
@@ -152,14 +147,14 @@
 
     .hero::after {
       background: url("Prancheta 1VC10.png") center / cover;
-      bottom: -180px;
+      bottom: -190px;
       content: "";
-      height: 520px;
+      height: 530px;
       opacity: 0.045;
       pointer-events: none;
       position: absolute;
       right: -170px;
-      width: 520px;
+      width: 530px;
     }
 
     .hero-copy,
@@ -171,7 +166,7 @@
     .intro {
       font-size: 1.08rem;
       margin: 30px 0 0;
-      max-width: 570px;
+      max-width: 580px;
     }
 
     .portrait {
@@ -196,77 +191,30 @@
       text-transform: uppercase;
     }
 
-    .home-links {
-      background: var(--petroleo);
-      display: grid;
-      gap: 0;
-      grid-template-columns: repeat(2, 1fr);
-    }
-
-    .home-link {
-      background: transparent;
-      border: 0;
-      color: var(--creme);
-      cursor: pointer;
-      min-height: 300px;
-      padding: clamp(42px, 5vw, 80px) 8vw;
-      text-align: left;
-      transition: background 0.25s ease;
-    }
-
-    .home-link:hover {
-      background: var(--petroleo-escuro);
-    }
-
-    .home-link p {
-      color: rgba(255, 242, 222, 0.8);
-      margin: 20px 0 0;
-      max-width: 440px;
-    }
-
-    .home-link span {
-      color: var(--verde);
-      display: block;
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      margin-top: 30px;
-      text-transform: uppercase;
-    }
-
-    .page {
-      display: none;
-    }
-
-    .page.active {
-      display: block;
-    }
-
-    .content-page {
-      min-height: calc(100vh - 140px);
+    section {
       padding: 7vw 8vw;
     }
 
-    .content-page > header {
-      margin-bottom: 55px;
-      max-width: 900px;
-    }
-
-    .for-you-page {
+    .for-you {
       background: var(--petroleo);
       color: var(--creme);
+    }
+
+    .section-header {
+      margin-bottom: 58px;
+      max-width: 920px;
     }
 
     .points {
       display: grid;
-      gap: 52px 40px;
+      gap: 54px 40px;
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
 
     .points p {
       color: rgba(255, 242, 222, 0.86);
       font-size: 0.95rem;
-      margin: 14px 0 0;
+      margin: 15px 0 0;
     }
 
     .closing {
@@ -275,12 +223,9 @@
       max-width: 800px;
     }
 
-    .first-page {
+    .first-session {
       background: var(--verde);
-    }
-
-    .first-page header {
-      max-width: 890px;
+      color: var(--petroleo-escuro);
     }
 
     .steps {
@@ -292,13 +237,12 @@
 
     .step p {
       font-size: 0.98rem;
-      margin: 15px 0 0;
+      margin: 16px 0 0;
     }
 
     .contact {
       background: var(--petroleo-escuro);
       color: var(--creme);
-      padding: 7vw 8vw;
     }
 
     .contact-grid {
@@ -367,8 +311,8 @@
 
     .reveal {
       opacity: 0;
-      transform: translateY(24px);
-      transition: opacity 0.75s ease, transform 0.75s ease;
+      transform: translateY(25px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
     .reveal.visible {
@@ -378,12 +322,12 @@
 
     @media (max-width: 1050px) {
       .site-header {
-        min-height: 114px;
+        min-height: 120px;
       }
 
       .brand {
-        height: 94px;
-        width: 210px;
+        height: 105px;
+        width: 205px;
       }
 
       .menu {
@@ -410,8 +354,8 @@
       }
 
       .brand {
-        height: 76px;
-        width: 164px;
+        height: 78px;
+        width: 155px;
       }
 
       .menu-toggle {
@@ -448,25 +392,18 @@
 
       .portrait {
         justify-self: start;
-        margin-top: 15px;
+        margin-top: 12px;
         width: min(76vw, 360px);
       }
 
-      .home-links,
+      section {
+        padding: 16vw 8vw;
+      }
+
       .points,
       .steps,
       .contact-grid {
         grid-template-columns: 1fr;
-      }
-
-      .home-link {
-        min-height: 230px;
-        padding: 12vw 8vw;
-      }
-
-      .content-page,
-      .contact {
-        padding: 16vw 8vw;
       }
 
       .points {
@@ -487,13 +424,13 @@
 
 <body>
   <header class="site-header">
-    <a class="brand" href="#inicio" data-page="inicio" aria-label="Página inicial">
+    <a class="brand" href="Index.html" aria-label="Página inicial">
       <img src="logovanessa.png" alt="Vanessa Cassarotti Psicóloga Clínica">
     </a>
 
     <button class="menu-toggle" type="button" aria-expanded="false">Menu</button>
 
-    <nav class="menu" aria-label="Navegação principal">
+    <nav class="menu">
       <a href="sobre-mim.html">Sobre mim</a>
       <a href="a-psicoterapia.html">A psicoterapia</a>
       <a href="perguntas-frequentes.html">Perguntas frequentes</a>
@@ -502,40 +439,25 @@
   </header>
 
   <main>
-    <section class="page home active" id="inicio">
-      <div class="hero">
-        <div class="hero-copy reveal">
-          <p class="eyebrow">Vanessa Cassarotti. Psicóloga em São Paulo (CRP 06/237547).</p>
+    <section class="hero">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Vanessa Cassarotti. Psicóloga em São Paulo (CRP 06/237547).</p>
 
-          <h1>Psicoterapia para quem quer entender as escolhas que fez, e as que ainda pode fazer.</h1>
+        <h1>Psicoterapia para quem quer entender as escolhas que fez, e as que ainda pode fazer.</h1>
 
-          <p class="intro">Psicoterapia individual presencial e online, com abordagem fenomenológico-existencial.</p>
-        </div>
-
-        <figure class="portrait reveal">
-          <img src="fotocapa.HEIF" alt="Vanessa Cassarotti">
-          <figcaption>Psicóloga clínica</figcaption>
-        </figure>
+        <p class="intro">Psicoterapia individual presencial e online, com abordagem fenomenológico-existencial.</p>
       </div>
 
-      <div class="home-links">
-        <button class="home-link reveal" type="button" data-page="para-quem-e">
-          <h3>Para quem é</h3>
-          <p>Cada pessoa chega à terapia por um caminho próprio. Estes são alguns dos pontos de partida que mais escuto.</p>
-          <span>Conheça mais</span>
-        </button>
-
-        <button class="home-link reveal" type="button" data-page="primeira-consulta">
-          <h3>Primeira consulta</h3>
-          <p>Como funciona a primeira consulta de psicoterapia: o que acontece, o que levar e como decidir se quer continuar.</p>
-          <span>Conheça mais</span>
-        </button>
-      </div>
+      <figure class="portrait reveal">
+        <img src="fotocapa.jpg" alt="Vanessa Cassarotti">
+        <figcaption>Psicóloga clínica</figcaption>
+      </figure>
     </section>
 
-    <section class="page content-page for-you-page" id="para-quem-e">
-      <header class="reveal">
+    <section class="for-you">
+      <header class="section-header reveal">
         <p class="eyebrow">Para quem é</p>
+
         <h2>Cada pessoa chega à terapia por um caminho próprio. Estes são alguns dos pontos de partida que mais escuto.</h2>
       </header>
 
@@ -579,9 +501,10 @@
       <p class="closing reveal">Se você se descreve como ansioso, esgotado ou sem rumo, esse também é um bom ponto de partida. O que está acontecendo com você se entende em conversa, e nenhuma lista dá conta disso.</p>
     </section>
 
-    <section class="page content-page first-page" id="primeira-consulta">
-      <header class="reveal">
+    <section class="first-session">
+      <header class="section-header reveal">
         <p class="eyebrow">Primeira consulta</p>
+
         <h2>Como funciona a primeira consulta de psicoterapia: o que acontece, o que levar e como decidir se quer continuar.</h2>
       </header>
 
@@ -607,7 +530,9 @@
       <div class="contact-grid">
         <div class="reveal">
           <p class="eyebrow">Contato</p>
+
           <h2>Agende uma conversa inicial comigo.</h2>
+
           <p>Atendimento presencial em São Paulo e online</p>
 
           <a class="button" href="https://wa.me/5511981220809" target="_blank" rel="noopener">
@@ -632,35 +557,8 @@
   </footer>
 
   <script>
-    const pages = document.querySelectorAll(".page");
-    const pageButtons = document.querySelectorAll("[data-page]");
-    const menu = document.querySelector(".menu");
     const toggle = document.querySelector(".menu-toggle");
-
-    function showPage(id) {
-      pages.forEach((page) => {
-        page.classList.toggle("active", page.id === id);
-      });
-
-      menu.classList.remove("open");
-      toggle.setAttribute("aria-expanded", "false");
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-
-      history.replaceState(null, "", "#" + id);
-
-      setTimeout(revealElements, 100);
-    }
-
-    pageButtons.forEach((item) => {
-      item.addEventListener("click", (event) => {
-        event.preventDefault();
-        showPage(item.dataset.page);
-      });
-    });
+    const menu = document.querySelector(".menu");
 
     toggle.addEventListener("click", () => {
       const open = menu.classList.toggle("open");
@@ -668,9 +566,7 @@
     });
 
     function revealElements() {
-      const elements = document.querySelectorAll(".reveal");
-
-      elements.forEach((element) => {
+      document.querySelectorAll(".reveal").forEach((element) => {
         const position = element.getBoundingClientRect().top;
         const visibleArea = window.innerHeight - 80;
 
@@ -682,12 +578,6 @@
 
     window.addEventListener("scroll", revealElements);
     window.addEventListener("load", revealElements);
-
-    const initialPage = location.hash.replace("#", "");
-
-    if (document.getElementById(initialPage)) {
-      showPage(initialPage);
-    }
   </script>
 </body>
 </html>
