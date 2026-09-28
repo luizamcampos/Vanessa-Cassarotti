@@ -25,6 +25,7 @@
     }
 
     * { box-sizing: border-box; }
+
     html { scroll-behavior: smooth; }
 
     body {
@@ -35,7 +36,10 @@
       font-family: "Avenir Next", Arial, sans-serif;
     }
 
-    a { color: inherit; text-decoration: none; }
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
 
     h1, h2, h3 {
       font-family: "Bricolage Grotesque", Arial, sans-serif;
@@ -87,7 +91,10 @@
       color: var(--creme);
       font-size: 14px;
       font-weight: 700;
+      transition: opacity .2s ease;
     }
+
+    .menu a:hover { opacity: .7; }
 
     .hero {
       min-height: calc(100vh - 132px);
@@ -105,7 +112,7 @@
       margin: auto;
       padding: 48px clamp(28px, 7vw, 112px) 44px;
       display: grid;
-      grid-template-columns: minmax(0, 1.13fr) minmax(270px, 0.66fr);
+      grid-template-columns: minmax(0, 1.13fr) minmax(270px, .66fr);
       align-items: center;
       gap: clamp(42px, 8vw, 136px);
       position: relative;
@@ -117,26 +124,26 @@
       font-size: 11px;
       line-height: 1.45;
       font-weight: 700;
-      letter-spacing: 0.1em;
+      letter-spacing: .1em;
       text-transform: uppercase;
     }
 
     .eyebrow {
       margin-bottom: 18px;
-      color: rgba(4, 38, 48, 0.53);
+      color: rgba(4, 38, 48, .53);
     }
 
     h1 {
       max-width: 690px;
       margin: 0;
       font-size: clamp(42px, 4.25vw, 69px);
-      line-height: 0.97;
+      line-height: .97;
     }
 
     .hero-description {
       max-width: 510px;
       margin: 28px 0 26px;
-      color: rgba(4, 38, 48, 0.67);
+      color: rgba(4, 38, 48, .67);
       font-size: 16px;
       line-height: 1.6;
     }
@@ -158,7 +165,9 @@
       color: var(--creme);
     }
 
-    .primary-button:hover, .top-button:hover { transform: translateY(-2px); }
+    .primary-button:hover, .top-button:hover {
+      transform: translateY(-2px);
+    }
 
     .hero-photo {
       width: min(100%, 320px);
@@ -182,7 +191,9 @@
       pointer-events: none;
     }
 
-    .section { padding: clamp(80px, 10vw, 140px) clamp(28px, 7vw, 112px); }
+    .section {
+      padding: clamp(80px, 10vw, 140px) clamp(28px, 7vw, 112px);
+    }
 
     .section-inner {
       width: 100%;
@@ -190,7 +201,6 @@
       margin: auto;
     }
 
-    /* METODOLOGIA */
     .methodology {
       background: var(--petroleo);
       color: var(--creme);
@@ -200,7 +210,7 @@
       display: grid;
       grid-template-columns: minmax(260px, .65fr) minmax(400px, 1.2fr);
       gap: clamp(55px, 10vw, 160px);
-      align-items: stretch;
+      align-items: start;
     }
 
     .methodology-left {
@@ -222,9 +232,10 @@
     }
 
     .methodology-image {
-      width: 100%;
-      min-height: 300px;
-      flex: 1;
+      width: 86%;
+      max-height: 430px;
+      min-height: 0;
+      flex: none;
       margin-top: 38px;
       display: block;
       object-fit: cover;
@@ -240,7 +251,6 @@
 
     .methodology-copy p:last-child { margin-bottom: 0; }
 
-    /* PARA QUEM É */
     .audience {
       background: var(--verde);
       color: var(--petroleo-escuro);
@@ -274,8 +284,13 @@
       gap: 52px 36px;
     }
 
+    .audience-card {
+      display: grid;
+      grid-template-rows: 92px auto;
+    }
+
     .audience-card h3 {
-      margin: 0 0 14px;
+      margin: 0;
       font-size: 26px;
       line-height: 1.03;
     }
@@ -294,7 +309,6 @@
       line-height: 1.65;
     }
 
-    /* PRIMEIRA CONSULTA */
     .first-session {
       background: var(--creme);
       color: var(--petroleo-escuro);
@@ -330,7 +344,6 @@
       line-height: 1.65;
     }
 
-    /* CONTATO */
     .contact {
       padding: clamp(78px, 9vw, 122px) 0 0;
       background: var(--petroleo);
@@ -422,7 +435,9 @@
     }
 
     @media (max-width: 1000px) {
-      .audience-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .audience-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
 
       .methodology-grid {
         grid-template-columns: minmax(210px, .65fr) minmax(390px, 1.2fr);
@@ -431,7 +446,10 @@
     }
 
     @media (max-width: 760px) {
-      .site-header { padding-top: 14px; padding-bottom: 14px; }
+      .site-header {
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
 
       .header-content {
         flex-direction: column;
@@ -439,7 +457,11 @@
         gap: 16px;
       }
 
-      .menu { justify-content: flex-start; gap: 13px 20px; }
+      .menu {
+        justify-content: flex-start;
+        gap: 13px 20px;
+      }
+
       .menu a { font-size: 12px; }
 
       .hero { min-height: auto; }
@@ -472,8 +494,14 @@
       }
 
       .methodology-image {
+        width: 100%;
+        max-width: 300px;
         max-height: none;
-        min-height: 0;
+      }
+
+      .audience-card {
+        grid-template-rows: auto;
+        gap: 14px;
       }
 
       .section-intro { margin-bottom: 48px; }
@@ -658,13 +686,13 @@
   <script>
     const revealElements = document.querySelectorAll(".reveal");
 
-    const revealOnScroll = () => {
+    function revealOnScroll() {
       revealElements.forEach((element) => {
         if (element.getBoundingClientRect().top < window.innerHeight * 0.9) {
           element.classList.add("visible");
         }
       });
-    };
+    }
 
     window.addEventListener("scroll", revealOnScroll);
     window.addEventListener("load", revealOnScroll);
