@@ -23,13 +23,8 @@
       --verde: #90B7B2;
     }
 
-    * {
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
 
     body {
       margin: 0;
@@ -48,7 +43,16 @@
       max-width: 1440px;
       min-height: 100vh;
       margin: 0 auto;
-      padding: 42px clamp(28px, 9vw, 180px) 110px;
+      padding: 28px clamp(28px, 9vw, 180px) 100px;
+      position: relative;
+    }
+
+    .top-logo {
+      position: absolute;
+      top: 28px;
+      right: clamp(28px, 9vw, 180px);
+      width: 84px;
+      height: auto;
     }
 
     .back-link {
@@ -74,12 +78,12 @@
     }
 
     .content {
-      max-width: 910px;
-      margin: clamp(85px, 13vw, 185px) auto 0;
+      max-width: 1040px;
+      margin: clamp(62px, 7vw, 105px) auto 0;
     }
 
     .kicker {
-      margin: 0 0 23px;
+      margin: 0 0 20px;
       color: rgba(4, 38, 48, 0.58);
       font-size: 12px;
       font-weight: 700;
@@ -88,23 +92,37 @@
     }
 
     h1 {
-      max-width: 700px;
-      margin: 0 0 70px;
+      max-width: 650px;
+      margin: 0 0 52px;
       font-family: "Bricolage Grotesque", Arial, sans-serif;
-      font-size: clamp(64px, 8vw, 118px);
+      font-size: clamp(56px, 5.7vw, 82px);
       font-weight: 500;
-      line-height: 0.86;
+      line-height: 0.88;
       letter-spacing: -0.06em;
     }
 
+    .about-content {
+      display: grid;
+      grid-template-columns: minmax(230px, 0.55fr) minmax(420px, 1.25fr);
+      gap: clamp(45px, 7vw, 100px);
+      align-items: start;
+    }
+
+    .about-photo {
+      width: 100%;
+      max-height: 610px;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+    }
+
     .text {
-      max-width: 790px;
-      font-size: clamp(20px, 2vw, 28px);
-      line-height: 1.58;
+      font-size: clamp(19px, 1.65vw, 24px);
+      line-height: 1.62;
     }
 
     .text p {
-      margin: 0 0 35px;
+      margin: 0 0 30px;
     }
 
     .text p:last-child {
@@ -112,7 +130,7 @@
     }
 
     .button-wrap {
-      margin-top: 72px;
+      margin-top: 68px;
     }
 
     .button {
@@ -150,17 +168,33 @@
         padding: 30px 50px 80px;
       }
 
+      .top-logo {
+        top: 29px;
+        right: 50px;
+        width: 57px;
+      }
+
       .back-link {
         font-size: 14px;
       }
 
       .content {
-        margin-top: 92px;
+        margin-top: 75px;
       }
 
       h1 {
-        margin-bottom: 55px;
-        font-size: clamp(58px, 19vw, 82px);
+        margin-bottom: 42px;
+        font-size: clamp(50px, 16vw, 68px);
+      }
+
+      .about-content {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .about-photo {
+        width: 100%;
+        max-height: none;
       }
 
       .text {
@@ -181,6 +215,8 @@
 
 <body>
   <main class="page">
+    <img class="top-logo" src="Prancheta 1VC06.png" alt="Vanessa Cassarotti">
+
     <a class="back-link" href="Index.html#inicio">
       <span>←</span>
       Voltar para o início
@@ -190,20 +226,24 @@
       <p class="kicker reveal">Sobre mim</p>
       <h1 class="reveal">Vanessa Cassarotti</h1>
 
-      <div class="text reveal">
-        <p>Sou psicóloga (CRP 06/237547), com pós-graduação em psicologia fenomenológico-existencial. Atendo adolescentes, adultos e pessoas na maturidade em consultório, em São Paulo, e online.</p>
+      <div class="about-content">
+        <img class="about-photo reveal" src="fotosobremim.jpg" alt="Vanessa Cassarotti">
 
-        <p>Antes da psicologia, fui nutricionista, tive um restaurante próprio e passei pelo agronegócio, em uma empresa familiar. Essas profissões me ajudaram a ir aprendendo a sustentar escolhas e as consequências que vêm com elas, e a conviver com o que se segue depois que se decide. Em cada mudança de caminho levei comigo o que já tinha vivido, o que deu certo e o que deu errado, e é com essa bagagem que hoje escuto quem me procura. Ninguém chega totalmente pronto a uma escolha; seguimos em construção, decidindo com o que temos em mãos.</p>
+        <div class="text reveal">
+          <p>Sou psicóloga (CRP 06/237547), com pós-graduação em psicologia fenomenológico-existencial. Atendo adolescentes, adultos e pessoas na maturidade em consultório, em São Paulo, e online.</p>
 
-        <p>Levo esse percurso ao consultório como repertório. Conheço de perto o cansaço de quem sustenta muita coisa, a dúvida de quem pensa em mudar depois de muito tempo em uma direção e o desconforto de perceber que a vida ficou no piloto automático.</p>
+          <p>Antes da psicologia, fui nutricionista, tive um restaurante próprio e passei pelo agronegócio, em uma empresa familiar. Essas profissões me ajudaram a ir aprendendo a sustentar escolhas e as consequências que vêm com elas, e a conviver com o que se segue depois que se decide. Em cada mudança de caminho levei comigo o que já tinha vivido, o que deu certo e o que deu errado, e é com essa bagagem que hoje escuto quem me procura. Ninguém chega totalmente pronto a uma escolha; seguimos em construção, decidindo com o que temos em mãos.</p>
 
-        <p>Sou mãe de duas filhas, e a convivência com elas segue sendo uma das minhas melhores escolas sobre vínculo, liberdade e cuidado.</p>
-      </div>
+          <p>Levo esse percurso ao consultório como repertório. Conheço de perto o cansaço de quem sustenta muita coisa, a dúvida de quem pensa em mudar depois de muito tempo em uma direção e o desconforto de perceber que a vida ficou no piloto automático.</p>
 
-      <div class="button-wrap reveal">
-        <a class="button" href="https://wa.me/5511981220809" target="_blank" rel="noopener noreferrer">
-          Agende a sua sessão
-        </a>
+          <p>Sou mãe de duas filhas, e a convivência com elas segue sendo uma das minhas melhores escolas sobre vínculo, liberdade e cuidado.</p>
+
+          <div class="button-wrap">
+            <a class="button" href="https://wa.me/5511981220809" target="_blank" rel="noopener noreferrer">
+              Agende a sua sessão
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   </main>
