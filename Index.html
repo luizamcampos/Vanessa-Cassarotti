@@ -116,7 +116,7 @@
       margin: 0 auto;
       padding: 48px clamp(28px, 7vw, 112px) 44px;
       display: grid;
-      grid-template-columns: minmax(0, 1.13fr) minmax(280px, 0.7fr);
+      grid-template-columns: minmax(0, 1.13fr) minmax(270px, 0.66fr);
       align-items: center;
       gap: clamp(42px, 8vw, 136px);
       position: relative;
@@ -188,7 +188,7 @@
     }
 
     .hero-photo {
-      width: min(100%, 360px);
+      width: min(100%, 320px);
       justify-self: center;
       position: relative;
       z-index: 2;
@@ -197,15 +197,12 @@
     .hero-photo img {
       display: block;
       width: 100%;
-      height: min(50vh, 440px);
-      min-height: 330px;
-      object-fit: cover;
-      object-position: center;
+      height: auto;
     }
 
     .hero-graphic {
       position: absolute;
-      right: -5px;
+      right: -55px;
       bottom: -55px;
       width: min(35vw, 500px);
       z-index: 1;
@@ -228,19 +225,17 @@
     }
 
     .section-intro {
-      display: grid;
-      grid-template-columns: minmax(180px, 0.45fr) minmax(300px, 1fr);
-      gap: 36px;
       margin-bottom: 68px;
     }
 
     .section-intro .section-kicker {
+      margin-bottom: 22px;
       color: var(--verde);
     }
 
     .section-intro h2 {
-      max-width: 830px;
-      margin: 0;
+      max-width: 790px;
+      margin: 0 0 18px;
       font-size: clamp(37px, 4vw, 62px);
       line-height: 0.98;
     }
@@ -287,6 +282,7 @@
     }
 
     .first-session .section-kicker {
+      margin-bottom: 26px;
       color: rgba(4, 38, 48, 0.65);
     }
 
@@ -436,9 +432,8 @@
         gap: 42px;
       }
 
-      .hero-photo img {
-        min-height: 290px;
-        height: 390px;
+      .hero-photo {
+        width: min(100%, 280px);
       }
 
       .audience-grid {
@@ -488,28 +483,19 @@
       }
 
       .hero-photo {
-        width: min(100%, 330px);
+        width: min(100%, 300px);
         justify-self: start;
-      }
-
-      .hero-photo img {
-        height: 400px;
       }
 
       .hero-graphic {
         width: 68vw;
-        right: -20px;
+        right: -48px;
         bottom: -44px;
       }
 
-      .section-intro,
-      .contact-columns {
-        grid-template-columns: 1fr;
-        gap: 20px;
-      }
-
       .audience-grid,
-      .consultation-grid {
+      .consultation-grid,
+      .contact-columns {
         grid-template-columns: 1fr;
         gap: 38px;
       }
@@ -581,14 +567,9 @@
     <section class="section audience">
       <div class="section-inner">
         <div class="section-intro reveal">
-          <div>
-            <p class="section-kicker">Para quem é</p>
-          </div>
-
-          <div>
-            <h2>Cada pessoa chega à terapia por um caminho próprio.</h2>
-            <p class="audience-lead">Estes são alguns dos pontos de partida que mais escuto.</p>
-          </div>
+          <p class="section-kicker">Para quem é</p>
+          <h2>Cada pessoa chega à terapia por um caminho próprio.</h2>
+          <p class="audience-lead">Estes são alguns dos pontos de partida que mais escuto.</p>
         </div>
 
         <div class="audience-grid">
@@ -666,11 +647,8 @@
         <div class="contact-columns">
           <div class="contact-left reveal">
             <p class="section-kicker contact-kicker">Contato</p>
-
             <h2 class="contact-title">Agende uma conversa inicial comigo.</h2>
-
             <p class="contact-subtitle">Atendimento presencial em São Paulo e online</p>
-
             <a class="top-button" href="#inicio">Subir ao topo</a>
           </div>
 
