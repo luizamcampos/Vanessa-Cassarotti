@@ -3,7 +3,6 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Vanessa Cassarotti, Psicóloga Clínica em São Paulo.">
   <title>Vanessa Cassarotti | Psicóloga Clínica</title>
 
   <style>
@@ -20,12 +19,10 @@
     }
 
     :root {
-      --petroleo: #0A3845;
+      --petroleo: #0a3845;
       --petroleo-escuro: #042630;
-      --creme: #FFF2DE;
-      --verde: #90B7B2;
-      --azul: #9AB5D2;
-      --branco: #ffffff;
+      --creme: #fff2de;
+      --verde: #90b7b2;
     }
 
     * {
@@ -37,249 +34,216 @@
     }
 
     body {
-      margin: 0;
       background: var(--creme);
       color: var(--petroleo-escuro);
       font-family: "Avenir Next", Arial, sans-serif;
+      margin: 0;
       overflow-x: hidden;
     }
 
     a {
       color: inherit;
-      text-decoration: none;
-    }
-
-    .site-header {
-      min-height: 132px;
-      background: var(--petroleo);
-      display: flex;
-      align-items: center;
-      padding: 18px clamp(28px, 7vw, 112px);
-    }
-
-    .header-content {
-      width: 100%;
-      max-width: 1440px;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      gap: 32px;
-    }
-
-    .brand {
-      width: 158px;
-      height: 76px;
-      overflow: hidden;
-      flex: 0 0 auto;
-      display: block;
-    }
-
-    .brand img {
-      display: block;
-      width: 197px;
-      max-width: none;
-      transform: translate(-20px, -81px);
-    }
-
-    .menu {
-      display: flex;
-      align-items: center;
-      justify-content: flex-end;
-      flex-wrap: wrap;
-      gap: clamp(18px, 2.4vw, 40px);
-    }
-
-    .menu a {
-      color: var(--creme);
-      font-size: 14px;
-      font-weight: 700;
-      transition: opacity 0.2s ease;
-    }
-
-    .menu a:hover {
-      opacity: 0.7;
-    }
-
-    .hero {
-      min-height: calc(100vh - 132px);
-      min-height: 610px;
-      position: relative;
-      overflow: hidden;
-      background: var(--creme);
-      display: flex;
-      align-items: center;
-    }
-
-    .hero-inner {
-      width: 100%;
-      max-width: 1440px;
-      margin: 0 auto;
-      padding: 48px clamp(28px, 7vw, 112px) 44px;
-      display: grid;
-      grid-template-columns: minmax(0, 1.13fr) minmax(280px, 0.7fr);
-      align-items: center;
-      gap: clamp(42px, 8vw, 136px);
-      position: relative;
-      z-index: 2;
-    }
-
-    .eyebrow,
-    .section-kicker {
-      margin: 0;
-      font-size: 11px;
-      line-height: 1.45;
-      font-weight: 700;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-    }
-
-    .eyebrow {
-      color: rgba(4, 38, 48, 0.53);
-      margin-bottom: 18px;
     }
 
     h1,
     h2,
     h3 {
       font-family: "Bricolage Grotesque", Arial, sans-serif;
-      font-weight: 500;
+      font-weight: 400;
       letter-spacing: -0.045em;
     }
 
     h1 {
-      max-width: 690px;
+      font-size: clamp(2.8rem, 3.9vw, 4.65rem);
+      line-height: 1;
       margin: 0;
-      color: var(--petroleo-escuro);
-      font-size: clamp(42px, 4.25vw, 69px);
-      line-height: 0.97;
     }
 
-    .hero-description {
-      max-width: 510px;
-      margin: 28px 0 26px;
-      color: rgba(4, 38, 48, 0.67);
-      font-size: 16px;
-      line-height: 1.6;
+    h2 {
+      font-size: clamp(2.5rem, 4vw, 4.5rem);
+      line-height: 1;
+      margin: 0;
     }
 
-    .primary-button,
-    .top-button {
-      display: inline-flex;
+    h3 {
+      font-size: 1.4rem;
+      line-height: 1.12;
+      margin: 0;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+
+    .site-header {
       align-items: center;
-      justify-content: center;
-      border-radius: 999px;
-      font-size: 14px;
-      font-weight: 700;
-      line-height: 1.2;
-      transition: transform 0.2s ease, background 0.2s ease;
-    }
-
-    .primary-button {
-      min-height: 52px;
-      padding: 14px 25px;
       background: var(--petroleo);
-      color: var(--creme);
-      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      min-height: 135px;
+      padding: 8px 7vw;
     }
 
-    .primary-button:hover,
-    .top-button:hover {
-      transform: translateY(-2px);
-    }
-
-    .hero-photo {
-      width: min(100%, 360px);
-      justify-self: center;
-      position: relative;
-      z-index: 2;
-    }
-
-    .hero-photo img {
+    .brand {
       display: block;
-      width: 100%;
-      height: min(50vh, 440px);
-      min-height: 330px;
+      height: 92px;
+      overflow: hidden;
+      width: 175px;
+    }
+
+    .brand img {
+      display: block;
+      height: auto;
+      max-width: none;
+      transform: translate(-22px, -90px);
+      width: 218px;
+    }
+
+    .menu {
+      align-items: center;
+      display: flex;
+      gap: clamp(18px, 2.5vw, 42px);
+    }
+
+    .menu a {
+      color: var(--creme);
+      font-size: 0.9rem;
+      text-decoration: none;
+      white-space: nowrap;
+    }
+
+    .menu a:hover {
+      color: var(--verde);
+    }
+
+    .menu-toggle {
+      background: transparent;
+      border: 0;
+      color: var(--creme);
+      cursor: pointer;
+      display: none;
+      font: inherit;
+    }
+
+    .eyebrow {
+      color: var(--verde);
+      font-size: 0.75rem;
+      font-weight: 700;
+      letter-spacing: 0.13em;
+      margin: 0 0 20px;
+      text-transform: uppercase;
+    }
+
+    .hero {
+      align-items: center;
+      display: grid;
+      gap: 7vw;
+      grid-template-columns: 1.08fr 0.68fr;
+      min-height: calc(100vh - 135px);
+      overflow: hidden;
+      padding: 2.7vw 8vw 2vw;
+      position: relative;
+    }
+
+    .hero::after {
+      background-image: url("Prancheta 1VC10.png");
+      background-position: right bottom;
+      background-repeat: no-repeat;
+      background-size: contain;
+      bottom: -42px;
+      content: "";
+      height: 82%;
+      opacity: 1;
+      pointer-events: none;
+      position: absolute;
+      right: 0;
+      width: 47%;
+    }
+
+    .hero-copy,
+    .portrait {
+      position: relative;
+      z-index: 1;
+    }
+
+    .intro {
+      font-size: 1rem;
+      margin: 22px 0 0;
+      max-width: 560px;
+    }
+
+    .hero .button {
+      background: var(--petroleo);
+      border: 1px solid var(--petroleo);
+      border-radius: 999px;
+      color: var(--creme);
+      display: inline-block;
+      font-size: 0.88rem;
+      font-weight: 700;
+      margin-top: 28px;
+      padding: 16px 23px;
+      text-decoration: none;
+      transition: 0.2s ease;
+    }
+
+    .hero .button:hover {
+      background: transparent;
+      color: var(--petroleo);
+    }
+
+    .portrait {
+      justify-self: end;
+      margin: 0;
+      width: min(25vw, 340px);
+    }
+
+    .portrait img {
+      aspect-ratio: 4 / 5;
+      display: block;
       object-fit: cover;
       object-position: center;
-    }
-
-    .hero-graphic {
-      position: absolute;
-      right: -5px;
-      bottom: -55px;
-      width: min(35vw, 500px);
-      z-index: 1;
-      pointer-events: none;
-    }
-
-    .section {
-      padding: clamp(80px, 10vw, 140px) clamp(28px, 7vw, 112px);
-    }
-
-    .section-inner {
       width: 100%;
-      max-width: 1440px;
-      margin: 0 auto;
     }
 
-    .audience {
+    .portrait figcaption {
+      color: var(--petroleo);
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      margin-top: 13px;
+      text-transform: uppercase;
+    }
+
+    section {
+      padding: 7vw 8vw;
+    }
+
+    .for-you {
       background: var(--petroleo);
       color: var(--creme);
     }
 
-    .section-intro {
+    .section-header {
+      margin-bottom: 58px;
+      max-width: 920px;
+    }
+
+    .points {
       display: grid;
-      grid-template-columns: minmax(180px, 0.45fr) minmax(300px, 1fr);
-      gap: 36px;
-      margin-bottom: 68px;
-    }
-
-    .section-intro .section-kicker {
-      color: var(--verde);
-    }
-
-    .section-intro h2 {
-      max-width: 830px;
-      margin: 0;
-      font-size: clamp(37px, 4vw, 62px);
-      line-height: 0.98;
-    }
-
-    .audience-lead {
-      max-width: 590px;
-      margin: 0;
-      color: rgba(255, 242, 222, 0.75);
-      font-size: 17px;
-      line-height: 1.6;
-    }
-
-    .audience-grid {
-      display: grid;
+      gap: 54px 40px;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 52px 36px;
     }
 
-    .audience-card h3 {
-      margin: 0 0 14px;
-      color: var(--creme);
-      font-size: 26px;
-      line-height: 1.03;
+    .points p {
+      color: rgba(255, 242, 222, 0.86);
+      font-size: 0.95rem;
+      margin: 15px 0 0;
     }
 
-    .audience-card p {
-      margin: 0;
-      color: rgba(255, 242, 222, 0.78);
-      font-size: 15px;
-      line-height: 1.6;
-    }
-
-    .audience-closing {
-      max-width: 790px;
-      margin: 72px 0 0;
-      color: var(--verde);
-      font-size: 18px;
-      line-height: 1.65;
+    .closing {
+      font-size: 1.08rem;
+      margin: 65px 0 0;
+      max-width: 800px;
     }
 
     .first-session {
@@ -287,115 +251,97 @@
       color: var(--petroleo-escuro);
     }
 
-    .first-session .section-kicker {
-      color: rgba(4, 38, 48, 0.65);
-    }
-
-    .first-session h2 {
-      max-width: 960px;
-      margin: 0 0 62px;
-      font-size: clamp(37px, 4vw, 62px);
-      line-height: 0.98;
-    }
-
-    .consultation-grid {
+    .steps {
       display: grid;
+      gap: 50px;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 48px;
+      margin-top: 70px;
     }
 
-    .consultation-item h3 {
-      margin: 0 0 18px;
-      font-size: 31px;
-      line-height: 1;
-    }
-
-    .consultation-item p {
-      margin: 0;
-      font-size: 16px;
-      line-height: 1.65;
+    .step p {
+      font-size: 0.98rem;
+      margin: 16px 0 0;
     }
 
     .contact {
-      background: var(--azul);
-      color: var(--petroleo-escuro);
-      padding: clamp(78px, 9vw, 122px) clamp(28px, 7vw, 112px) 30px;
+      background: var(--petroleo-escuro);
+      color: var(--creme);
     }
 
-    .contact-inner {
-      width: 100%;
-      max-width: 1440px;
-      margin: 0 auto;
-    }
-
-    .contact-columns {
-      display: grid;
-      grid-template-columns: minmax(280px, 0.8fr) minmax(360px, 1fr);
-      gap: clamp(60px, 11vw, 180px);
+    .contact-grid {
       align-items: start;
+      display: grid;
+      gap: 7vw;
+      grid-template-columns: 0.85fr 1.15fr;
     }
 
-    .contact-kicker,
-    .work-kicker {
-      color: rgba(4, 38, 48, 0.72);
+    .contact h2 {
+      max-width: 550px;
     }
 
-    .contact-title {
-      max-width: 480px;
-      margin: 34px 0 22px;
-      font-size: clamp(48px, 4.8vw, 72px);
-      line-height: 0.92;
+    .contact p {
+      color: rgba(255, 242, 222, 0.86);
+      margin: 20px 0 24px;
+      max-width: 500px;
     }
 
-    .contact-subtitle {
-      margin: 0 0 28px;
-      font-size: 17px;
-      font-weight: 700;
-      line-height: 1.5;
-    }
-
-    .top-button {
-      min-height: 50px;
-      padding: 13px 25px;
+    .button {
       background: var(--creme);
+      border: 1px solid var(--creme);
+      border-radius: 999px;
       color: var(--petroleo-escuro);
-    }
-
-    .work-copy {
-      margin-top: 34px;
-    }
-
-    .work-copy p {
-      margin: 0 0 22px;
-      font-size: 16px;
-      line-height: 1.62;
-    }
-
-    .work-copy p:last-child {
-      margin-bottom: 0;
+      display: inline-block;
+      font-size: 0.9rem;
       font-weight: 700;
+      padding: 17px 24px;
+      text-decoration: none;
+      transition: 0.2s ease;
     }
 
-    .site-footer {
-      max-width: 1440px;
-      margin: 68px auto 0;
-      padding-top: 23px;
-      border-top: 1px solid rgba(4, 38, 48, 0.35);
-      color: rgba(4, 38, 48, 0.8);
-      font-size: 12px;
-      font-weight: 700;
-      line-height: 1.6;
+    .button:hover {
+      background: var(--verde);
+      border-color: var(--verde);
     }
 
-    .site-footer p {
+    .contact-info {
+      padding-top: 2px;
+    }
+
+    .contact-info p {
+      font-size: 0.93rem;
+      margin: 0 0 18px;
+      max-width: 590px;
+    }
+
+    .contact-info .values {
+      color: var(--creme);
+      font-size: 1rem;
+      margin-top: 26px;
+    }
+
+    footer {
+      background: var(--petroleo-escuro);
+      border-top: 1px solid rgba(255, 242, 222, 0.23);
+      color: rgba(255, 242, 222, 0.73);
+      padding: 25px 8vw 34px;
+    }
+
+    footer p {
+      font-size: 0.76rem;
+      line-height: 1.55;
+      margin: 0 0 8px;
       max-width: 850px;
-      margin: 0 0 6px;
+    }
+
+    footer strong {
+      color: var(--creme);
+      font-weight: 400;
     }
 
     .reveal {
       opacity: 0;
-      transform: translateY(20px);
-      transition: opacity 0.75s ease, transform 0.75s ease;
+      transform: translateY(25px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
     }
 
     .reveal.visible {
@@ -403,312 +349,293 @@
       transform: translateY(0);
     }
 
-    @media (max-width: 1000px) {
+    @media (max-width: 1050px) {
       .site-header {
-        min-height: 112px;
+        min-height: 120px;
       }
 
       .brand {
-        width: 140px;
-        height: 68px;
+        height: 82px;
+        width: 156px;
       }
 
       .brand img {
-        width: 175px;
-        transform: translate(-18px, -72px);
-      }
-
-      .hero {
-        min-height: auto;
-      }
-
-      .hero-inner {
-        grid-template-columns: 1fr 0.68fr;
-        gap: 42px;
-      }
-
-      .hero-photo img {
-        min-height: 290px;
-        height: 390px;
-      }
-
-      .audience-grid {
-        grid-template-columns: repeat(2, minmax(0, 1fr));
-      }
-    }
-
-    @media (max-width: 760px) {
-      .site-header {
-        padding-top: 14px;
-        padding-bottom: 14px;
-      }
-
-      .header-content {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-      }
-
-      .brand {
-        width: 128px;
-        height: 62px;
-      }
-
-      .brand img {
-        width: 160px;
-        transform: translate(-16px, -66px);
+        transform: translate(-19px, -80px);
+        width: 194px;
       }
 
       .menu {
-        justify-content: flex-start;
-        gap: 13px 20px;
+        gap: 18px;
       }
 
       .menu a {
-        font-size: 12px;
+        font-size: 0.8rem;
       }
 
-      .hero-inner {
+      .hero {
+        min-height: calc(100vh - 120px);
+      }
+
+      .points {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .contact-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .site-header {
+        min-height: 96px;
+        padding: 5px 7vw;
+      }
+
+      .brand {
+        height: 70px;
+        width: 133px;
+      }
+
+      .brand img {
+        transform: translate(-16px, -68px);
+        width: 166px;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .menu {
+        align-items: flex-start;
+        background: var(--petroleo);
+        display: none;
+        flex-direction: column;
+        gap: 8px;
+        left: 0;
+        padding: 18px 7vw 30px;
+        position: absolute;
+        right: 0;
+        top: 96px;
+        z-index: 20;
+      }
+
+      .menu.open {
+        display: flex;
+      }
+
+      .menu a {
+        font-size: 1rem;
+        padding: 8px 0;
+      }
+
+      .hero {
         grid-template-columns: 1fr;
-        padding-top: 58px;
-        padding-bottom: 70px;
+        min-height: auto;
+        padding: 12vw 8vw 10vw;
       }
 
-      h1 {
-        font-size: clamp(42px, 12vw, 58px);
+      .hero::after {
+        bottom: -25px;
+        height: 48%;
+        width: 80%;
       }
 
-      .hero-photo {
-        width: min(100%, 330px);
+      .portrait {
         justify-self: start;
+        margin-top: 10px;
+        width: min(68vw, 320px);
       }
 
-      .hero-photo img {
-        height: 400px;
+      section {
+        padding: 16vw 8vw;
       }
 
-      .hero-graphic {
-        width: 68vw;
-        right: -20px;
-        bottom: -44px;
-      }
-
-      .section-intro,
-      .contact-columns {
+      .points,
+      .steps,
+      .contact-grid {
         grid-template-columns: 1fr;
-        gap: 20px;
       }
 
-      .audience-grid,
-      .consultation-grid {
-        grid-template-columns: 1fr;
+      .points {
         gap: 38px;
       }
 
-      .section-intro {
-        margin-bottom: 48px;
+      .steps {
+        gap: 34px;
+        margin-top: 48px;
       }
 
-      .first-session h2 {
-        margin-bottom: 48px;
-      }
-
-      .contact-title {
-        margin-top: 28px;
-      }
-
-      .work-copy {
-        margin-top: 28px;
-      }
-
-      .site-footer {
-        margin-top: 50px;
+      h1 {
+        font-size: 3.15rem;
       }
     }
   </style>
 </head>
 
 <body>
-  <header class="site-header" id="inicio">
-    <div class="header-content">
-      <a class="brand" href="#inicio" aria-label="Vanessa Cassarotti">
-        <img src="logovanessa.png" alt="Vanessa Cassarotti">
-      </a>
+  <header class="site-header">
+    <a class="brand" href="#inicio" aria-label="Página inicial">
+      <img src="logovanessa.png" alt="Vanessa Cassarotti Psicóloga Clínica">
+    </a>
 
-      <nav class="menu" aria-label="Menu principal">
-        <a href="sobre-mim.html">Sobre mim</a>
-        <a href="a-psicoterapia.html">A psicoterapia</a>
-        <a href="perguntas-frequentes.html">Perguntas frequentes</a>
-        <a href="contato.html">Contato</a>
-      </nav>
-    </div>
+    <button class="menu-toggle" type="button" aria-expanded="false">Menu</button>
+
+    <nav class="menu">
+      <a href="sobre-mim.html">Sobre mim</a>
+      <a href="a-psicoterapia.html">A psicoterapia</a>
+      <a href="perguntas-frequentes.html">Perguntas frequentes</a>
+      <a href="contato.html">Contato</a>
+    </nav>
   </header>
 
   <main>
-    <section class="hero">
-      <img class="hero-graphic" src="Prancheta 1VC10.png" alt="" aria-hidden="true">
+    <section class="hero" id="inicio">
+      <div class="hero-copy reveal">
+        <p class="eyebrow">Vanessa Cassarotti. Psicóloga em São Paulo (CRP 06/237547).</p>
 
-      <div class="hero-inner">
-        <div class="hero-content reveal">
-          <p class="eyebrow">Vanessa Cassarotti. Psicóloga em São Paulo (CRP 06/237547).</p>
+        <h1>Psicoterapia para quem quer entender as escolhas que fez, e as que ainda pode fazer.</h1>
 
-          <h1>Psicoterapia para quem quer entender as escolhas que fez, e as que ainda pode fazer.</h1>
+        <p class="intro">Psicoterapia individual presencial e online, com abordagem fenomenológico-existencial.</p>
 
-          <p class="hero-description">
-            Psicoterapia individual presencial e online, com abordagem fenomenológico-existencial.
-          </p>
-
-          <a
-            class="primary-button"
-            href="https://wa.me/5511981220809"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Marcar uma conversa inicial e sem compromisso pelo WhatsApp
-          </a>
-        </div>
-
-        <div class="hero-photo reveal">
-          <img src="fotocapa.jpg" alt="Vanessa Cassarotti sentada em seu consultório">
-        </div>
+        <a class="button" href="https://wa.me/5511981220809" target="_blank" rel="noopener">
+          Marcar uma conversa inicial e sem compromisso pelo WhatsApp
+        </a>
       </div>
+
+      <figure class="portrait reveal">
+        <img src="fotocapa.jpg" alt="Vanessa Cassarotti">
+        <figcaption>Psicóloga clínica</figcaption>
+      </figure>
     </section>
 
-    <section class="section audience">
-      <div class="section-inner">
-        <div class="section-intro reveal">
-          <div>
-            <p class="section-kicker">Para quem é</p>
-          </div>
+    <section class="for-you">
+      <header class="section-header reveal">
+        <p class="eyebrow">Para quem é</p>
 
-          <div>
-            <h2>Cada pessoa chega à terapia por um caminho próprio.</h2>
-            <p class="audience-lead">Estes são alguns dos pontos de partida que mais escuto.</p>
-          </div>
-        </div>
+        <h2>Cada pessoa chega à terapia por um caminho próprio. Estes são alguns dos pontos de partida que mais escuto.</h2>
+      </header>
 
-        <div class="audience-grid">
-          <article class="audience-card reveal">
-            <h3>Por fora está tudo em ordem, e por dentro algo não encaixa.</h3>
-            <p>Trabalho, família e rotina funcionam, e ainda assim existe uma pergunta que não sai do lugar.</p>
-          </article>
+      <div class="points">
+        <article class="reveal">
+          <h3>Por fora está tudo em ordem, e por dentro algo não encaixa.</h3>
+          <p>Trabalho, família e rotina funcionam, e ainda assim existe uma pergunta que não sai do lugar.</p>
+        </article>
 
-          <article class="audience-card reveal">
-            <h3>Uma decisão adiada por tempo demais.</h3>
-            <p>Carreira, relação, mudança de cidade ou de vida. Muitas vezes a dificuldade está menos em escolher e mais em assumir o que a escolha implica.</p>
-          </article>
+        <article class="reveal">
+          <h3>Uma decisão adiada por tempo demais.</h3>
+          <p>Carreira, relação, mudança de cidade ou de vida. Muitas vezes a dificuldade está menos em escolher e mais em assumir o que a escolha implica.</p>
+        </article>
 
-          <article class="audience-card reveal">
-            <h3>Recomeços em qualquer idade, inclusive na maturidade.</h3>
-            <p>Quando o roteiro conhecido acaba (uma separação, uma aposentadoria, filhos que saem de casa, uma carreira que já não faz sentido), abre-se um espaço desconfortável e cheio de possibilidades.</p>
-          </article>
+        <article class="reveal">
+          <h3>Recomeços em qualquer idade, inclusive na maturidade.</h3>
+          <p>Quando o roteiro conhecido acaba (uma separação, uma aposentadoria, filhos que saem de casa, uma carreira que já não faz sentido), abre-se um espaço desconfortável e cheio de possibilidades.</p>
+        </article>
 
-          <article class="audience-card reveal">
-            <h3>A sensação de viver no automático.</h3>
-            <p>Um cansaço que o descanso não resolve, entre o tédio e a angústia, com a impressão de que a vida está acontecendo ao lado.</p>
-          </article>
+        <article class="reveal">
+          <h3>A sensação de viver no automático.</h3>
+          <p>Um cansaço que o descanso não resolve, entre o tédio e a angústia, com a impressão de que a vida está acontecendo ao lado.</p>
+        </article>
 
-          <article class="audience-card reveal">
-            <h3>Uma relação difícil com a comida e com o corpo.</h3>
-            <p>Trabalhada sem moralismo e sem a lógica de certo e errado, olhando para o sentido que comer, controlar ou evitar tem na sua história.</p>
-          </article>
+        <article class="reveal">
+          <h3>Uma relação difícil com a comida e com o corpo.</h3>
+          <p>Trabalhada sem moralismo e sem a lógica de certo e errado, olhando para o sentido que comer, controlar ou evitar tem na sua história.</p>
+        </article>
 
-          <article class="audience-card reveal">
-            <h3>Padrões que se repetem nos vínculos.</h3>
-            <p>Nas relações de família, de casal e de trabalho, os mesmos enredos costumam reaparecer com personagens diferentes.</p>
-          </article>
+        <article class="reveal">
+          <h3>Padrões que se repetem nos vínculos.</h3>
+          <p>Nas relações de família, de casal e de trabalho, os mesmos enredos costumam reaparecer com personagens diferentes.</p>
+        </article>
 
-          <article class="audience-card reveal">
-            <h3>Perdas e mudanças de papel.</h3>
-            <p>Luto, separação, diagnóstico de alguém querido, o fim de uma fase. A finitude também faz parte do que se pode conversar aqui.</p>
-          </article>
-        </div>
-
-        <p class="audience-closing reveal">
-          Se você se descreve como ansioso, esgotado ou sem rumo, esse também é um bom ponto de partida. O que está acontecendo com você se entende em conversa, e nenhuma lista dá conta disso.
-        </p>
+        <article class="reveal">
+          <h3>Perdas e mudanças de papel.</h3>
+          <p>Luto, separação, diagnóstico de alguém querido, o fim de uma fase. A finitude também faz parte do que se pode conversar aqui.</p>
+        </article>
       </div>
+
+      <p class="closing reveal">Se você se descreve como ansioso, esgotado ou sem rumo, esse também é um bom ponto de partida. O que está acontecendo com você se entende em conversa, e nenhuma lista dá conta disso.</p>
     </section>
 
-    <section class="section first-session">
-      <div class="section-inner">
-        <p class="section-kicker reveal">Primeira consulta</p>
+    <section class="first-session">
+      <header class="section-header reveal">
+        <p class="eyebrow">Primeira consulta</p>
 
-        <h2 class="reveal">
-          Como funciona a primeira consulta de psicoterapia: o que acontece, o que levar e como decidir se quer continuar.
-        </h2>
+        <h2>Como funciona a primeira consulta de psicoterapia: o que acontece, o que levar e como decidir se quer continuar.</h2>
+      </header>
 
-        <div class="consultation-grid">
-          <article class="consultation-item reveal">
-            <h3>Antes.</h3>
-            <p>Você me escreve pelo WhatsApp, com uma mensagem curta, e combinamos dia, horário e modalidade.</p>
-          </article>
+      <div class="steps">
+        <article class="step reveal">
+          <h3>Antes.</h3>
+          <p>Você me escreve pelo WhatsApp, com uma mensagem curta, e combinamos dia, horário e modalidade.</p>
+        </article>
 
-          <article class="consultation-item reveal">
-            <h3>Durante.</h3>
-            <p>A primeira sessão é uma conversa sobre o que trouxe você até aqui. Não precisa chegar com o assunto organizado, nem saber nomear o que sente, nem preparar nada. Você fala no ritmo que puder, e ninguém aqui está julgando o que você diz.</p>
-          </article>
+        <article class="step reveal">
+          <h3>Durante.</h3>
+          <p>A primeira sessão é uma conversa sobre o que trouxe você até aqui. Não precisa chegar com o assunto organizado, nem saber nomear o que sente, nem preparar nada. Você fala no ritmo que puder, e ninguém aqui está julgando o que você diz.</p>
+        </article>
 
-          <article class="consultation-item reveal">
-            <h3>Depois.</h3>
-            <p>No final, conversamos sobre como seria o trabalho (frequência, formato, combinados de horário, faltas e remarcações). A decisão de continuar é sua, e você pode levar o tempo que precisar para pensar; se quiser seguir comigo, combinamos os próximos encontros, e se preferir não seguir, tudo bem também.</p>
-          </article>
-        </div>
+        <article class="step reveal">
+          <h3>Depois.</h3>
+          <p>No final, conversamos sobre como seria o trabalho (frequência, formato, combinados de horário, faltas e remarcações). A decisão de continuar é sua, e você pode levar o tempo que precisar para pensar; se quiser seguir comigo, combinamos os próximos encontros, e se preferir não seguir, tudo bem também.</p>
+        </article>
       </div>
     </section>
 
     <section class="contact">
-      <div class="contact-inner">
-        <div class="contact-columns">
-          <div class="contact-left reveal">
-            <p class="section-kicker contact-kicker">Contato</p>
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="eyebrow">Contato</p>
 
-            <h2 class="contact-title">Agende uma conversa inicial comigo.</h2>
+          <h2>Agende uma conversa inicial comigo.</h2>
 
-            <p class="contact-subtitle">Atendimento presencial em São Paulo e online</p>
+          <p>Atendimento presencial em São Paulo e online</p>
 
-            <a class="top-button" href="#inicio">Subir ao topo</a>
-          </div>
-
-          <div class="work-content reveal">
-            <p class="section-kicker work-kicker">Como trabalho</p>
-
-            <div class="work-copy">
-              <p>Atendo em sessões individuais de 50 minutos, presencialmente em Pinheiros, em São Paulo, ou online, por videochamada, de onde você estiver. O ponto de partida costuma ser um encontro por semana, e a frequência é combinada em conjunto e revista ao longo do processo.</p>
-
-              <p>No atendimento online, o formato, a duração e o sigilo são os mesmos do presencial. Você só precisa de um lugar reservado, uma conexão estável e fones de ouvido, se possível.</p>
-
-              <p>Tudo o que é conversado nas sessões é sigiloso, conforme o Código de Ética Profissional do Psicólogo.</p>
-
-              <p>Valores e horários disponíveis são conversados já no primeiro contato, com calma e sem compromisso, e qualquer dúvida pode ser retomada na primeira sessão.</p>
-            </div>
-          </div>
+          <a class="button" href="#inicio">
+            Subir ao topo
+          </a>
         </div>
 
-        <footer class="site-footer">
-          <p>Vanessa Cassarotti, Psicóloga · CRP 06/237547</p>
-          <p>Este site tem caráter informativo e não substitui atendimento psicológico. Em situação de crise, procure o CVV (188, 24 horas) ou o serviço de urgência mais próximo.</p>
-        </footer>
+        <div class="contact-info reveal">
+          <p class="eyebrow">Como trabalho</p>
+
+          <p>Atendo em sessões individuais de 50 minutos, presencialmente em Pinheiros, em São Paulo, ou online, por videochamada, de onde você estiver. O ponto de partida costuma ser um encontro por semana, e a frequência é combinada em conjunto e revista ao longo do processo.</p>
+
+          <p>No atendimento online, o formato, a duração e o sigilo são os mesmos do presencial. Você só precisa de um lugar reservado, uma conexão estável e fones de ouvido, se possível.</p>
+
+          <p>Tudo o que é conversado nas sessões é sigiloso, conforme o Código de Ética Profissional do Psicólogo.</p>
+
+          <p class="values">Valores e horários disponíveis são conversados já no primeiro contato, com calma e sem compromisso, e qualquer dúvida pode ser retomada na primeira sessão.</p>
+        </div>
       </div>
     </section>
   </main>
 
+  <footer>
+    <p><strong>Vanessa Cassarotti, Psicóloga · CRP 06/237547</strong></p>
+    <p>Este site tem caráter informativo e não substitui atendimento psicológico. Em situação de crise, procure o CVV (188, 24 horas) ou o serviço de urgência mais próximo.</p>
+  </footer>
+
   <script>
-    const revealElements = document.querySelectorAll(".reveal");
+    const toggle = document.querySelector(".menu-toggle");
+    const menu = document.querySelector(".menu");
 
-    const revealOnScroll = () => {
-      revealElements.forEach((element) => {
+    toggle.addEventListener("click", () => {
+      const open = menu.classList.toggle("open");
+      toggle.setAttribute("aria-expanded", open);
+    });
+
+    function revealElements() {
+      document.querySelectorAll(".reveal").forEach((element) => {
         const position = element.getBoundingClientRect().top;
-        const screenPosition = window.innerHeight * 0.9;
+        const visibleArea = window.innerHeight - 80;
 
-        if (position < screenPosition) {
+        if (position < visibleArea) {
           element.classList.add("visible");
         }
       });
-    };
+    }
 
-    window.addEventListener("scroll", revealOnScroll);
-    window.addEventListener("load", revealOnScroll);
+    window.addEventListener("scroll", revealElements);
+    window.addEventListener("load", revealElements);
   </script>
 </body>
 </html>
