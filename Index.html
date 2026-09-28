@@ -29,11 +29,16 @@
       box-sizing: border-box;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
       background: var(--creme);
       color: var(--petroleo-escuro);
       font-family: "Avenir Next", Arial, sans-serif;
       margin: 0;
+      overflow-x: hidden;
     }
 
     button,
@@ -46,61 +51,48 @@
       background: var(--petroleo);
       display: flex;
       justify-content: space-between;
-      min-height: 126px;
-      padding: 13px 7vw;
+      min-height: 140px;
+      padding: 12px 7vw;
     }
 
     .brand {
       display: block;
-      height: 100px;
-      width: 190px;
+      height: 116px;
+      overflow: hidden;
+      width: 250px;
     }
 
     .brand img {
       height: 100%;
-      object-fit: contain;
+      object-fit: cover;
+      object-position: center 62%;
       width: 100%;
     }
 
     .menu {
       align-items: center;
       display: flex;
-      gap: 34px;
+      gap: clamp(18px, 2.6vw, 42px);
     }
 
-    .menu button {
-      background: transparent;
-      border: 0;
+    .menu a {
       color: var(--creme);
-      cursor: pointer;
-      font-size: 0.92rem;
-      padding: 10px 0;
+      font-size: 0.9rem;
+      text-decoration: none;
+      white-space: nowrap;
     }
 
-    .menu button:hover,
-    .menu button.active {
+    .menu a:hover {
       color: var(--verde);
     }
 
     .menu-toggle {
-      background: none;
+      background: transparent;
       border: 0;
       color: var(--creme);
       cursor: pointer;
       display: none;
-    }
-
-    main,
-    .page {
-      min-height: calc(100vh - 126px);
-    }
-
-    .page {
-      display: none;
-    }
-
-    .page.active {
-      display: block;
+      font-size: 0.92rem;
     }
 
     h1,
@@ -112,26 +104,26 @@
     }
 
     h1 {
-      font-size: clamp(3.1rem, 5.2vw, 5.6rem);
+      font-size: clamp(3.2rem, 5.2vw, 5.8rem);
       line-height: 0.98;
       margin: 0;
     }
 
     h2 {
-      font-size: clamp(2.5rem, 4vw, 4.5rem);
+      font-size: clamp(2.4rem, 4vw, 4.5rem);
       line-height: 1;
       margin: 0;
     }
 
     h3 {
-      font-size: 1.35rem;
-      line-height: 1.12;
-      margin: 0 0 13px;
+      font-size: 1.55rem;
+      line-height: 1.08;
+      margin: 0;
     }
 
     p {
       font-size: 1rem;
-      line-height: 1.62;
+      line-height: 1.65;
     }
 
     .eyebrow {
@@ -144,28 +136,33 @@
     }
 
     .home {
+      display: block;
+    }
+
+    .hero {
       align-items: center;
       display: grid;
-      gap: 7vw;
-      grid-template-columns: 1.05fr 0.72fr;
+      gap: 8vw;
+      grid-template-columns: 1.08fr 0.72fr;
+      min-height: calc(100vh - 140px);
       overflow: hidden;
       padding: 7vw 8vw;
       position: relative;
     }
 
-    .home::after {
+    .hero::after {
       background: url("Prancheta 1VC10.png") center / cover;
-      bottom: -12vw;
+      bottom: -180px;
       content: "";
-      height: 440px;
-      opacity: 0.055;
+      height: 520px;
+      opacity: 0.045;
       pointer-events: none;
       position: absolute;
-      right: -11vw;
-      width: 440px;
+      right: -170px;
+      width: 520px;
     }
 
-    .home-copy,
+    .hero-copy,
     .portrait {
       position: relative;
       z-index: 1;
@@ -174,13 +171,13 @@
     .intro {
       font-size: 1.08rem;
       margin: 30px 0 0;
-      max-width: 580px;
+      max-width: 570px;
     }
 
     .portrait {
       justify-self: end;
       margin: 0;
-      width: min(31vw, 390px);
+      width: min(31vw, 400px);
     }
 
     .portrait img {
@@ -193,18 +190,65 @@
 
     .portrait figcaption {
       color: var(--petroleo);
-      font-size: 0.76rem;
-      letter-spacing: 0.07em;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
       margin-top: 13px;
       text-transform: uppercase;
     }
 
+    .home-links {
+      background: var(--petroleo);
+      display: grid;
+      gap: 0;
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .home-link {
+      background: transparent;
+      border: 0;
+      color: var(--creme);
+      cursor: pointer;
+      min-height: 300px;
+      padding: clamp(42px, 5vw, 80px) 8vw;
+      text-align: left;
+      transition: background 0.25s ease;
+    }
+
+    .home-link:hover {
+      background: var(--petroleo-escuro);
+    }
+
+    .home-link p {
+      color: rgba(255, 242, 222, 0.8);
+      margin: 20px 0 0;
+      max-width: 440px;
+    }
+
+    .home-link span {
+      color: var(--verde);
+      display: block;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      margin-top: 30px;
+      text-transform: uppercase;
+    }
+
+    .page {
+      display: none;
+    }
+
+    .page.active {
+      display: block;
+    }
+
     .content-page {
-      padding: 7vw 8vw 6vw;
+      min-height: calc(100vh - 140px);
+      padding: 7vw 8vw;
     }
 
     .content-page > header {
-      margin-bottom: 48px;
+      margin-bottom: 55px;
       max-width: 900px;
     }
 
@@ -215,24 +259,20 @@
 
     .points {
       display: grid;
-      gap: 46px 40px;
+      gap: 52px 40px;
       grid-template-columns: repeat(4, minmax(0, 1fr));
-    }
-
-    .points article {
-      padding: 0;
     }
 
     .points p {
       color: rgba(255, 242, 222, 0.86);
-      font-size: 0.94rem;
-      margin: 0;
+      font-size: 0.95rem;
+      margin: 14px 0 0;
     }
 
     .closing {
       font-size: 1.08rem;
-      margin: 60px 0 0;
-      max-width: 780px;
+      margin: 65px 0 0;
+      max-width: 800px;
     }
 
     .first-page {
@@ -240,19 +280,19 @@
     }
 
     .first-page header {
-      max-width: 880px;
+      max-width: 890px;
     }
 
     .steps {
       display: grid;
-      gap: 48px;
+      gap: 50px;
       grid-template-columns: repeat(3, minmax(0, 1fr));
       margin-top: 70px;
     }
 
     .step p {
       font-size: 0.98rem;
-      margin: 0;
+      margin: 15px 0 0;
     }
 
     .contact {
@@ -269,7 +309,7 @@
     }
 
     .contact h2 {
-      max-width: 660px;
+      max-width: 650px;
     }
 
     .contact p {
@@ -288,7 +328,7 @@
       font-weight: 700;
       padding: 17px 24px;
       text-decoration: none;
-      transition: 0.2s;
+      transition: 0.2s ease;
     }
 
     .button:hover {
@@ -317,7 +357,7 @@
       font-size: 0.76rem;
       line-height: 1.55;
       margin: 0 0 8px;
-      max-width: 840px;
+      max-width: 850px;
     }
 
     footer strong {
@@ -325,43 +365,53 @@
       font-weight: 400;
     }
 
-    @media (max-width: 900px) {
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 1050px) {
       .site-header {
-        min-height: 100px;
-        padding: 10px 7vw;
+        min-height: 114px;
       }
 
       .brand {
-        height: 78px;
-        width: 155px;
-      }
-
-      main,
-      .page {
-        min-height: calc(100vh - 100px);
+        height: 94px;
+        width: 210px;
       }
 
       .menu {
-        gap: 19px;
+        gap: 18px;
       }
 
-      .menu button {
-        font-size: 0.82rem;
+      .menu a {
+        font-size: 0.8rem;
+      }
+
+      .hero {
+        min-height: auto;
       }
 
       .points {
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }
 
-    @media (max-width: 650px) {
+    @media (max-width: 700px) {
       .site-header {
-        min-height: 84px;
+        min-height: 94px;
+        padding: 8px 7vw;
       }
 
       .brand {
-        height: 65px;
-        width: 132px;
+        height: 76px;
+        width: 164px;
       }
 
       .menu-toggle {
@@ -375,28 +425,23 @@
         flex-direction: column;
         gap: 8px;
         left: 0;
-        padding: 15px 7vw 25px;
+        padding: 18px 7vw 30px;
         position: absolute;
         right: 0;
-        top: 84px;
-        z-index: 4;
+        top: 94px;
+        z-index: 20;
       }
 
       .menu.open {
         display: flex;
       }
 
-      .menu button {
+      .menu a {
         font-size: 1rem;
         padding: 8px 0;
       }
 
-      main,
-      .page {
-        min-height: calc(100vh - 84px);
-      }
-
-      .home {
+      .hero {
         grid-template-columns: 1fr;
         padding: 16vw 8vw;
       }
@@ -404,7 +449,19 @@
       .portrait {
         justify-self: start;
         margin-top: 15px;
-        width: min(75vw, 350px);
+        width: min(76vw, 360px);
+      }
+
+      .home-links,
+      .points,
+      .steps,
+      .contact-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .home-link {
+        min-height: 230px;
+        padding: 12vw 8vw;
       }
 
       .content-page,
@@ -412,23 +469,17 @@
         padding: 16vw 8vw;
       }
 
-      .points,
-      .steps,
-      .contact-grid {
-        grid-template-columns: 1fr;
-      }
-
       .points {
-        gap: 34px;
+        gap: 38px;
       }
 
       .steps {
-        gap: 32px;
-        margin-top: 45px;
+        gap: 34px;
+        margin-top: 48px;
       }
 
       h1 {
-        font-size: 3.25rem;
+        font-size: 3.3rem;
       }
     }
   </style>
@@ -443,91 +494,109 @@
     <button class="menu-toggle" type="button" aria-expanded="false">Menu</button>
 
     <nav class="menu" aria-label="Navegação principal">
-      <button type="button" data-page="para-quem-e">Para quem é</button>
-      <button type="button" data-page="primeira-consulta">Primeira consulta</button>
+      <a href="sobre-mim.html">Sobre mim</a>
+      <a href="a-psicoterapia.html">A psicoterapia</a>
+      <a href="perguntas-frequentes.html">Perguntas frequentes</a>
+      <a href="contato.html">Contato</a>
     </nav>
   </header>
 
   <main>
     <section class="page home active" id="inicio">
-      <div class="home-copy">
-        <p class="eyebrow">Vanessa Cassarotti. Psicóloga em São Paulo (CRP 06/237547).</p>
+      <div class="hero">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Vanessa Cassarotti. Psicóloga em São Paulo (CRP 06/237547).</p>
 
-        <h1>Psicoterapia para quem quer entender as escolhas que fez, e as que ainda pode fazer.</h1>
+          <h1>Psicoterapia para quem quer entender as escolhas que fez, e as que ainda pode fazer.</h1>
 
-        <p class="intro">Psicoterapia individual presencial e online, com abordagem fenomenológico-existencial.</p>
+          <p class="intro">Psicoterapia individual presencial e online, com abordagem fenomenológico-existencial.</p>
+        </div>
+
+        <figure class="portrait reveal">
+          <img src="fotocapa.HEIF" alt="Vanessa Cassarotti">
+          <figcaption>Psicóloga clínica</figcaption>
+        </figure>
       </div>
 
-      <figure class="portrait">
-        <img src="fotocapa.HEIF" alt="Vanessa Cassarotti">
-        <figcaption>Psicóloga clínica</figcaption>
-      </figure>
+      <div class="home-links">
+        <button class="home-link reveal" type="button" data-page="para-quem-e">
+          <h3>Para quem é</h3>
+          <p>Cada pessoa chega à terapia por um caminho próprio. Estes são alguns dos pontos de partida que mais escuto.</p>
+          <span>Conheça mais</span>
+        </button>
+
+        <button class="home-link reveal" type="button" data-page="primeira-consulta">
+          <h3>Primeira consulta</h3>
+          <p>Como funciona a primeira consulta de psicoterapia: o que acontece, o que levar e como decidir se quer continuar.</p>
+          <span>Conheça mais</span>
+        </button>
+      </div>
     </section>
 
     <section class="page content-page for-you-page" id="para-quem-e">
-      <header>
+      <header class="reveal">
         <p class="eyebrow">Para quem é</p>
         <h2>Cada pessoa chega à terapia por um caminho próprio. Estes são alguns dos pontos de partida que mais escuto.</h2>
       </header>
 
       <div class="points">
-        <article>
+        <article class="reveal">
           <h3>Por fora está tudo em ordem, e por dentro algo não encaixa.</h3>
           <p>Trabalho, família e rotina funcionam, e ainda assim existe uma pergunta que não sai do lugar.</p>
         </article>
 
-        <article>
+        <article class="reveal">
           <h3>Uma decisão adiada por tempo demais.</h3>
           <p>Carreira, relação, mudança de cidade ou de vida. Muitas vezes a dificuldade está menos em escolher e mais em assumir o que a escolha implica.</p>
         </article>
 
-        <article>
+        <article class="reveal">
           <h3>Recomeços em qualquer idade, inclusive na maturidade.</h3>
           <p>Quando o roteiro conhecido acaba (uma separação, uma aposentadoria, filhos que saem de casa, uma carreira que já não faz sentido), abre-se um espaço desconfortável e cheio de possibilidades.</p>
         </article>
 
-        <article>
+        <article class="reveal">
           <h3>A sensação de viver no automático.</h3>
           <p>Um cansaço que o descanso não resolve, entre o tédio e a angústia, com a impressão de que a vida está acontecendo ao lado.</p>
         </article>
 
-        <article>
+        <article class="reveal">
           <h3>Uma relação difícil com a comida e com o corpo.</h3>
           <p>Trabalhada sem moralismo e sem a lógica de certo e errado, olhando para o sentido que comer, controlar ou evitar tem na sua história.</p>
         </article>
 
-        <article>
+        <article class="reveal">
           <h3>Padrões que se repetem nos vínculos.</h3>
           <p>Nas relações de família, de casal e de trabalho, os mesmos enredos costumam reaparecer com personagens diferentes.</p>
         </article>
 
-        <article>
+        <article class="reveal">
           <h3>Perdas e mudanças de papel.</h3>
           <p>Luto, separação, diagnóstico de alguém querido, o fim de uma fase. A finitude também faz parte do que se pode conversar aqui.</p>
         </article>
       </div>
 
-      <p class="closing">Se você se descreve como ansioso, esgotado ou sem rumo, esse também é um bom ponto de partida. O que está acontecendo com você se entende em conversa, e nenhuma lista dá conta disso.</p>
+      <p class="closing reveal">Se você se descreve como ansioso, esgotado ou sem rumo, esse também é um bom ponto de partida. O que está acontecendo com você se entende em conversa, e nenhuma lista dá conta disso.</p>
     </section>
 
     <section class="page content-page first-page" id="primeira-consulta">
-      <header>
+      <header class="reveal">
         <p class="eyebrow">Primeira consulta</p>
         <h2>Como funciona a primeira consulta de psicoterapia: o que acontece, o que levar e como decidir se quer continuar.</h2>
       </header>
 
       <div class="steps">
-        <article class="step">
+        <article class="step reveal">
           <h3>Antes.</h3>
           <p>Você me escreve pelo WhatsApp, com uma mensagem curta, e combinamos dia, horário e modalidade.</p>
         </article>
 
-        <article class="step">
+        <article class="step reveal">
           <h3>Durante.</h3>
           <p>A primeira sessão é uma conversa sobre o que trouxe você até aqui. Não precisa chegar com o assunto organizado, nem saber nomear o que sente, nem preparar nada. Você fala no ritmo que puder, e ninguém aqui está julgando o que você diz.</p>
         </article>
 
-        <article class="step">
+        <article class="step reveal">
           <h3>Depois.</h3>
           <p>No final, conversamos sobre como seria o trabalho (frequência, formato, combinados de horário, faltas e remarcações). A decisão de continuar é sua, e você pode levar o tempo que precisar para pensar; se quiser seguir comigo, combinamos os próximos encontros, e se preferir não seguir, tudo bem também.</p>
         </article>
@@ -536,7 +605,7 @@
 
     <section class="contact">
       <div class="contact-grid">
-        <div>
+        <div class="reveal">
           <p class="eyebrow">Contato</p>
           <h2>Agende uma conversa inicial comigo.</h2>
           <p>Atendimento presencial em São Paulo e online</p>
@@ -546,8 +615,9 @@
           </a>
         </div>
 
-        <div class="contact-info">
+        <div class="contact-info reveal">
           <p>Online: por videochamada, de qualquer lugar</p>
+
           <a href="https://wa.me/5511981220809" target="_blank" rel="noopener">
             WhatsApp: +5511981220809
           </a>
@@ -563,7 +633,7 @@
 
   <script>
     const pages = document.querySelectorAll(".page");
-    const items = document.querySelectorAll("[data-page]");
+    const pageButtons = document.querySelectorAll("[data-page]");
     const menu = document.querySelector(".menu");
     const toggle = document.querySelector(".menu-toggle");
 
@@ -572,17 +642,20 @@
         page.classList.toggle("active", page.id === id);
       });
 
-      document.querySelectorAll(".menu [data-page]").forEach((button) => {
-        button.classList.toggle("active", button.dataset.page === id);
-      });
-
       menu.classList.remove("open");
       toggle.setAttribute("aria-expanded", "false");
-      window.scrollTo(0, 0);
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
       history.replaceState(null, "", "#" + id);
+
+      setTimeout(revealElements, 100);
     }
 
-    items.forEach((item) => {
+    pageButtons.forEach((item) => {
       item.addEventListener("click", (event) => {
         event.preventDefault();
         showPage(item.dataset.page);
@@ -594,10 +667,26 @@
       toggle.setAttribute("aria-expanded", open);
     });
 
-    const initial = location.hash.replace("#", "");
+    function revealElements() {
+      const elements = document.querySelectorAll(".reveal");
 
-    if (document.getElementById(initial)) {
-      showPage(initial);
+      elements.forEach((element) => {
+        const position = element.getBoundingClientRect().top;
+        const visibleArea = window.innerHeight - 80;
+
+        if (position < visibleArea) {
+          element.classList.add("visible");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealElements);
+    window.addEventListener("load", revealElements);
+
+    const initialPage = location.hash.replace("#", "");
+
+    if (document.getElementById(initialPage)) {
+      showPage(initialPage);
     }
   </script>
 </body>
