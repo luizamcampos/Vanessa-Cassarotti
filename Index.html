@@ -82,21 +82,23 @@
       background: var(--petroleo);
       display: flex;
       justify-content: space-between;
-      min-height: 145px;
-      padding: 8px 7vw;
+      min-height: 170px;
+      padding: 10px 7vw;
     }
 
     .brand {
       display: block;
-      height: 130px;
-      width: 300px;
+      height: 150px;
+      overflow: hidden;
+      width: 285px;
     }
 
     .brand img {
       display: block;
-      height: 100%;
-      object-fit: contain;
-      width: 100%;
+      height: auto;
+      max-width: none;
+      transform: translate(-35px, -146px);
+      width: 354px;
     }
 
     .menu {
@@ -135,13 +137,13 @@
     }
 
     .hero {
-      align-items: start;
+      align-items: center;
       display: grid;
       gap: 7vw;
       grid-template-columns: 1.08fr 0.68fr;
-      min-height: calc(100vh - 145px);
+      min-height: calc(100vh - 170px);
       overflow: hidden;
-      padding: 3.8vw 8vw 2.5vw;
+      padding: 2.7vw 8vw 2vw;
       position: relative;
     }
 
@@ -150,14 +152,14 @@
       background-position: right bottom;
       background-repeat: no-repeat;
       background-size: contain;
-      bottom: 0;
+      bottom: -110px;
       content: "";
-      height: 88%;
-      opacity: 0.16;
+      height: 86%;
+      opacity: 0.18;
       pointer-events: none;
       position: absolute;
       right: 0;
-      width: 47%;
+      width: 48%;
     }
 
     .hero-copy,
@@ -268,7 +270,7 @@
     }
 
     .contact-grid {
-      align-items: end;
+      align-items: center;
       display: grid;
       gap: 7vw;
       grid-template-columns: 1.2fr 0.8fr;
@@ -300,6 +302,10 @@
     .button:hover {
       background: var(--verde);
       border-color: var(--verde);
+    }
+
+    .contact-info {
+      align-self: center;
     }
 
     .contact-info a {
@@ -344,12 +350,17 @@
 
     @media (max-width: 1050px) {
       .site-header {
-        min-height: 120px;
+        min-height: 135px;
       }
 
       .brand {
-        height: 105px;
-        width: 230px;
+        height: 120px;
+        width: 228px;
+      }
+
+      .brand img {
+        transform: translate(-28px, -117px);
+        width: 283px;
       }
 
       .menu {
@@ -361,7 +372,7 @@
       }
 
       .hero {
-        min-height: auto;
+        min-height: calc(100vh - 135px);
       }
 
       .points {
@@ -371,13 +382,18 @@
 
     @media (max-width: 700px) {
       .site-header {
-        min-height: 94px;
-        padding: 8px 7vw;
+        min-height: 100px;
+        padding: 5px 7vw;
       }
 
       .brand {
-        height: 78px;
-        width: 170px;
+        height: 90px;
+        width: 171px;
+      }
+
+      .brand img {
+        transform: translate(-21px, -88px);
+        width: 212px;
       }
 
       .menu-toggle {
@@ -394,7 +410,7 @@
         padding: 18px 7vw 30px;
         position: absolute;
         right: 0;
-        top: 94px;
+        top: 100px;
         z-index: 20;
       }
 
@@ -409,13 +425,15 @@
 
       .hero {
         grid-template-columns: 1fr;
-        padding: 13vw 8vw 10vw;
+        min-height: auto;
+        padding: 12vw 8vw 10vw;
       }
 
       .hero::after {
-        height: 46%;
-        opacity: 0.11;
-        width: 78%;
+        bottom: -65px;
+        height: 48%;
+        opacity: 0.13;
+        width: 80%;
       }
 
       .portrait {
@@ -452,7 +470,7 @@
 
 <body>
   <header class="site-header">
-    <a class="brand" href="Index.html" aria-label="Página inicial">
+    <a class="brand" href="#inicio" aria-label="Página inicial">
       <img src="logovanessa.png" alt="Vanessa Cassarotti Psicóloga Clínica">
     </a>
 
@@ -467,7 +485,7 @@
   </header>
 
   <main>
-    <section class="hero">
+    <section class="hero" id="inicio">
       <div class="hero-copy reveal">
         <p class="eyebrow">Vanessa Cassarotti. Psicóloga em São Paulo (CRP 06/237547).</p>
 
@@ -567,8 +585,8 @@
 
           <p>Atendimento presencial em São Paulo e online</p>
 
-          <a class="button" href="https://wa.me/5511981220809" target="_blank" rel="noopener">
-            Marcar uma conversa inicial e sem compromisso pelo WhatsApp
+          <a class="button" href="#inicio">
+            Subir ao topo
           </a>
         </div>
 
