@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sobre mim | Vanessa Cassarotti</title>
+
+  <style>
+    @font-face {
+      font-family: "Bricolage Grotesque";
+      src: url("BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf") format("truetype");
+    }
+
+    @font-face {
+      font-family: "Avenir Next";
+      src: url("Avenir Next Regular.otf") format("opentype");
+    }
+
+    :root {
+      --petroleo: #0A3845;
+      --petroleo-escuro: #042630;
+      --creme: #FFF2DE;
+      --verde: #90B7B2;
+      --azul-claro: #9AB5D2;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      overflow-x: hidden;
+      background: var(--creme);
+      color: var(--petroleo-escuro);
+      font-family: "Avenir Next", Arial, sans-serif;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    h1, h2 {
+      margin: 0;
+      font-family: "Bricolage Grotesque", Arial, sans-serif;
+      font-weight: 500;
+      letter-spacing: -0.05em;
+    }
+
+    .site-header {
+      min-height: 132px;
+      padding: 18px clamp(28px, 7vw, 112px);
+      background: var(--petroleo);
+      display: flex;
+      align-items: center;
+    }
+
+    .header-content {
+      width: 100%;
+      max-width: 1440px;
+      margin: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 32px;
+    }
+
+    .brand {
+      width: 158px;
+      height: 76px;
+      overflow: hidden;
+      display: block;
+      flex: 0 0 auto;
+    }
+
+    .brand img {
+      display: block;
+      width: 197px;
+      max-width: none;
+      transform: translate(-20px, -81px);
+    }
+
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+      gap: clamp(18px, 2.4vw, 40px);
+    }
+
+    .menu a {
+      color: var(--creme);
+      font-size: 14px;
+      font-weight: 700;
+      transition: color 0.22s ease, transform 0.22s ease;
+    }
+
+    .menu a:hover,
+    .menu a:focus-visible,
+    .menu a.current {
+      color: var(--verde);
+      transform: scale(1.07);
+      outline: none;
+    }
+
+    .section {
+      padding: clamp(80px, 10vw, 145px) clamp(28px, 7vw, 112px);
+    }
+
+    .section-inner {
+      width: 100%;
+      max-width: 1440px;
+      margin: auto;
+    }
+
+    .section-kicker {
+      margin: 0 0 25px;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .about-intro {
+      background: var(--creme);
+    }
+
+    .about-intro-grid {
+      display: grid;
+      grid-template-columns: minmax(270px, 0.75fr) minmax(410px, 1.25fr);
+      gap: clamp(60px, 11vw, 190px);
+      align-items: start;
+    }
+
+    .about-intro .section-kicker {
+      color: rgba(4, 38, 48, 0.6);
+    }
+
+    .about-intro h1 {
+      max-width: 480px;
+      font-size: clamp(58px, 7vw, 108px);
+      line-height: 0.88;
+    }
+
+    .intro-text {
+      padding-top: 8px;
+      font-size: clamp(22px, 2vw, 30px);
+      line-height: 1.42;
+    }
+
+    .intro-text p {
+      margin: 0;
+    }
+
+    .journey {
+      background: var(--petroleo);
+      color: var(--creme);
+    }
+
+    .journey-grid {
+      display: grid;
+      grid-template-columns: minmax(240px, 0.65fr) minmax(420px, 1.2fr);
+      gap: clamp(60px, 11vw, 190px);
+      align-items: start;
+    }
+
+    .journey .section-kicker {
+      color: var(--verde);
+    }
+
+    .journey h2 {
+      max-width: 390px;
+      font-size: clamp(48px, 5vw, 76px);
+      line-height: 0.92;
+    }
+
+    .body-copy {
+      font-size: 18px;
+      line-height: 1.7;
+    }
+
+    .body-copy p {
+      margin: 0 0 28px;
+    }
+
+    .body-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    .journey .body-copy {
+      color: rgba(255, 242, 222, 0.9);
+    }
+
+    .consulting {
+      background: var(--verde);
+      color: var(--petroleo-escuro);
+    }
+
+    .consulting-grid {
+      display: grid;
+      grid-template-columns: minmax(240px, 0.65fr) minmax(420px, 1.2fr);
+      gap: clamp(60px, 11vw, 190px);
+      align-items: start;
+    }
+
+    .consulting .section-kicker {
+      color: rgba(4, 38, 48, 0.65);
+    }
+
+    .consulting h2 {
+      max-width: 410px;
+      font-size: clamp(48px, 5vw, 76px);
+      line-height: 0.92;
+    }
+
+    .contact {
+      background: var(--petroleo-escuro);
+      color: var(--creme);
+      text-align: center;
+    }
+
+    .contact .section-kicker {
+      color: var(--verde);
+    }
+
+    .contact h2 {
+      max-width: 780px;
+      margin: 0 auto 30px;
+      font-size: clamp(48px, 5.5vw, 82px);
+      line-height: 0.92;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 14px 26px;
+      border-radius: 999px;
+      background: var(--creme);
+      color: var(--petroleo-escuro);
+      font-size: 14px;
+      font-weight: 700;
+      transition: transform 0.2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+    }
+
+    .site-footer {
+      padding: 26px clamp(28px, 7vw, 112px) 30px;
+      background: var(--azul-claro);
+      color: var(--petroleo-escuro);
+    }
+
+    .site-footer-content {
+      width: 100%;
+      max-width: 1440px;
+      margin: auto;
+    }
+
+    .site-footer p {
+      max-width: 850px;
+      margin: 0 0 6px;
+      font-size: 12px;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    @media (max-width: 760px) {
+      .site-header {
+        padding-top: 14px;
+        padding-bottom: 14px;
+      }
+
+      .header-content {
+        flex-direction: column;
+        align-items: center;
+        gap: 16px;
+      }
+
+      .brand {
+        align-self: center;
+      }
+
+      .menu {
+        width: 100%;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 16px;
+      }
+
+      .menu a {
+        font-size: 12.5px;
+        font-weight: 400;
+        white-space: nowrap;
+      }
+
+      .about-intro-grid,
+      .journey-grid,
+      .consulting-grid {
+        grid-template-columns: 1fr;
+        gap: 38px;
+      }
+
+      .about-intro h1,
+      .journey h2,
+      .consulting h2 {
+        max-width: 100%;
+      }
+
+      .intro-text {
+        font-size: 22px;
+      }
+
+      .body-copy {
+        font-size: 17px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="header-content">
+      <a class="brand" href="Index.html#inicio" aria-label="Voltar ao início">
+        <img src="logovanessa.png" alt="Vanessa Cassarotti">
+      </a>
+
+      <nav class="menu">
+        <a href="Index.html#metodologia">Metodologia</a>
+        <a href="Index.html#para-quem-e">Para quem é</a>
+        <a href="Index.html#primeira-consulta">Primeira consulta</a>
+        <a class="current" href="sobre-mim.html">Sobre mim</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="section about-intro">
+      <div class="section-inner about-intro-grid">
+        <div class="reveal">
+          <p class="section-kicker">Sobre mim</p>
+          <h1>Vanessa Cassarotti</h1>
+        </div>
+
+        <div class="intro-text reveal">
+          <p>Sou psicóloga (CRP 06/237547), com pós-graduação em psicologia fenomenológico-existencial. Atendo adolescentes, adultos e pessoas na maturidade em consultório, em São Paulo, e online.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section journey">
+      <div class="section-inner journey-grid">
+        <div class="reveal">
+          <p class="section-kicker">Percurso</p>
+          <h2>O que trago comigo.</h2>
+        </div>
+
+        <div class="body-copy reveal">
+          <p>Antes da psicologia, fui nutricionista, tive um restaurante próprio e passei pelo agronegócio, em uma empresa familiar. Essas profissões me ajudaram a ir aprendendo a sustentar escolhas e as consequências que vêm com elas, e a conviver com o que se segue depois que se decide.</p>
+
+          <p>Em cada mudança de caminho levei comigo o que já tinha vivido, o que deu certo e o que deu errado, e é com essa bagagem que hoje escuto quem me procura. Ninguém chega totalmente pronto a uma escolha; seguimos em construção, decidindo com o que temos em mãos.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section consulting">
+      <div class="section-inner consulting-grid">
+        <div class="reveal">
+          <p class="section-kicker">No consultório</p>
+          <h2>Repertório para escutar.</h2>
+        </div>
+
+        <div class="body-copy reveal">
+          <p>Levo esse percurso ao consultório como repertório. Conheço de perto o cansaço de quem sustenta muita coisa, a dúvida de quem pensa em mudar depois de muito tempo em uma direção e o desconforto de perceber que a vida ficou no piloto automático.</p>
+
+          <p>Sou mãe de duas filhas, e a convivência com elas segue sendo uma das minhas melhores escolas sobre vínculo, liberdade e cuidado.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact">
+      <div class="section-inner reveal">
+        <p class="section-kicker">Contato</p>
+        <h2>Agende a sua sessão.</h2>
+        <a class="button" href="https://wa.me/5511981220809" target="_blank" rel="noopener noreferrer">Falar pelo WhatsApp</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="site-footer-content">
+      <p>Vanessa Cassarotti, Psicóloga · CRP 06/237547</p>
+      <p>Este site tem caráter informativo e não substitui atendimento psicológico. Em situação de crise, procure o CVV (188, 24 horas) ou o serviço de urgência mais próximo.</p>
+    </div>
+  </footer>
+
+  <script>
+    const revealElements = document.querySelectorAll(".reveal");
+
+    function revealOnScroll() {
+      revealElements.forEach((element) => {
+        if (element.getBoundingClientRect().top < window.innerHeight * 0.9) {
+          element.classList.add("visible");
+        }
+      });
+    }
+
+    window.addEventListener("scroll", revealOnScroll);
+    window.addEventListener("load", revealOnScroll);
+  </script>
+</body>
+</html>
