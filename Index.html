@@ -10,7 +10,6 @@
 @font-face{font-family:"Avenir Next";src:url("Avenir Next Regular.otf") format("opentype")}
 
 :root{--petroleo:#0A3845;--petroleo-escuro:#042630;--creme:#FFF2DE;--verde:#90B7B2;--azul-claro:#9AB5D2}
-
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 
@@ -156,9 +155,7 @@ h1{
 }
 
 .primary-button:hover,
-.top-button:hover{
-  transform:translateY(-2px)
-}
+.top-button:hover{transform:translateY(-2px)}
 
 .hero-photo{
   width:min(100%,320px);
@@ -279,7 +276,6 @@ h1{
 .methodology-image{
   width:86%;
   max-height:418px;
-  min-height:0;
   margin-top:50px;
   display:block;
   object-fit:cover;
@@ -335,14 +331,12 @@ h1{
   display:grid;
   grid-template-rows:132px auto;
   padding:30px 28px;
-  background:var(--creme);
+  background:var(--verde);
   border:1px solid var(--petroleo);
   transition:transform .22s ease
 }
 
-.audience-card.reveal.visible:hover{
-  transform:scale(1.03)
-}
+.audience-card.reveal.visible:hover{transform:scale(1.03)}
 
 .audience-card h3{
   margin:0;
@@ -431,19 +425,19 @@ h1{
   color:rgba(4,38,48,.65)
 }
 
-.contact-title-row{
+.contact-layout{
   display:grid;
-  grid-template-columns:minmax(0,1fr) 180px;
-  align-items:end;
-  gap:24px;
-  margin:34px 0 22px
+  grid-template-columns:180px minmax(0,1fr);
+  gap:28px;
+  align-items:start;
+  margin-top:34px
 }
 
-.contact-title{
-  max-width:420px;
-  margin:0;
-  font-size:clamp(42px,4.2vw,62px);
-  line-height:.92
+.contact-photo-column{
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  gap:22px
 }
 
 .contact-photo{
@@ -452,8 +446,15 @@ h1{
   height:auto
 }
 
+.contact-title{
+  max-width:310px;
+  margin:0 0 22px;
+  font-size:clamp(42px,4.2vw,62px);
+  line-height:.92
+}
+
 .contact-subtitle{
-  margin:0 0 28px;
+  margin:0;
   color:rgba(4,38,48,.78);
   font-size:17px;
   font-weight:700
@@ -636,21 +637,20 @@ h1{
   }
 
   .section-intro{margin-bottom:48px}
-
   .first-session h2{margin-bottom:48px}
 
-  .contact-title-row{
-    grid-template-columns:1fr;
-    align-items:start;
-    gap:28px
+  .contact-layout{
+    grid-template-columns:125px minmax(0,1fr);
+    gap:20px
   }
 
-  .contact-photo{
-    width:min(100%,230px)
+  .contact-photo-column{gap:16px}
+
+  .contact-title{
+    font-size:clamp(34px,9vw,44px)
   }
 
   .work-copy{margin-top:28px}
-
   .work-content{order:-1}
 }
 </style>
@@ -814,20 +814,24 @@ h1{
         <div class="contact-left reveal">
           <p class="section-kicker contact-kicker">Contato</p>
 
-          <div class="contact-title-row">
-            <h2 class="contact-title">Agende uma conversa inicial comigo.</h2>
-            <img class="contact-photo" src="photo-output.jpg" alt="Vanessa Cassarotti">
-          </div>
+          <div class="contact-layout">
+            <div class="contact-photo-column">
+              <img class="contact-photo" src="photo-output.jpg" alt="Vanessa Cassarotti">
+              <a class="top-button" href="#inicio">Voltar ao topo</a>
+            </div>
 
-          <p class="contact-subtitle">Atendimento presencial em São Paulo e online</p>
-          <a class="top-button" href="#inicio">Voltar ao topo</a>
+            <div>
+              <h2 class="contact-title">Agende<br>uma<br>conversa<br>inicial<br>comigo.</h2>
+              <p class="contact-subtitle">Atendimento presencial em São Paulo e online</p>
+            </div>
+          </div>
         </div>
 
         <div class="work-content reveal">
           <p class="section-kicker work-kicker">Como trabalho</p>
 
           <div class="work-copy">
-            <p>Atendo em sessões individuais de 50 minutos, presencialmente em Pinheiros, em São Paulo, ou online, por videochamada, de onde você estiver. O ponto de partida costuma ser um encontro por semana, e a frequência é combinada entre nós e revista ao longo do processo.</p>
+            <p>Atendo em sessões individuais de 50 minutos, presencialmente em São Paulo, ou online, por videochamada, de onde você estiver. O ponto de partida costuma ser um encontro por semana, e a frequência é combinada entre nós e revista ao longo do processo.</p>
 
             <p>No atendimento online, o formato, a duração e o sigilo são os mesmos do presencial. Você só precisa de um lugar reservado, uma conexão estável e fones de ouvido, se possível.</p>
 
