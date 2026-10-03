@@ -4,652 +4,132 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vanessa Cassarotti | Psicóloga Clínica</title>
-
 <style>
 @font-face{font-family:"Bricolage Grotesque";src:url("BricolageGrotesque-VariableFont_opsz,wdth,wght.ttf") format("truetype")}
 @font-face{font-family:"Avenir Next";src:url("Avenir Next Regular.otf") format("opentype")}
-
 :root{--petroleo:#0A3845;--petroleo-escuro:#042630;--creme:#FFF2DE;--verde:#90B7B2;--azul-claro:#9AB5D2}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-
-body{
-  margin:0;
-  overflow-x:hidden;
-  background:var(--creme);
-  color:var(--petroleo-escuro);
-  font-family:"Avenir Next",Arial,sans-serif
-}
-
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;overflow-x:hidden;background:var(--creme);color:var(--petroleo-escuro);font-family:"Avenir Next",Arial,sans-serif}
 a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:"Bricolage Grotesque",Arial,sans-serif;font-weight:500;letter-spacing:-.045em}
 
-h1,h2,h3{
-  font-family:"Bricolage Grotesque",Arial,sans-serif;
-  font-weight:500;
-  letter-spacing:-.045em
-}
+.site-header{min-height:132px;padding:18px clamp(28px,7vw,112px);background:var(--petroleo);display:flex;align-items:center}
+.header-content{width:100%;max-width:1440px;margin:auto;display:flex;align-items:center;justify-content:space-between;gap:32px}
+.brand{width:220px;height:76px;display:flex;align-items:center;flex:0 0 auto}
+.brand img{display:block;width:100%;height:auto;max-width:none}
+.menu{display:flex;flex-wrap:wrap;justify-content:flex-end;gap:clamp(18px,2.4vw,40px)}
+.menu a{color:var(--creme);font-size:14px;font-weight:700;transition:color .22s ease,transform .22s ease}
+.menu a:hover,.menu a:focus-visible{color:var(--verde);transform:scale(1.07);outline:none}
 
-.site-header{
-  min-height:132px;
-  padding:18px clamp(28px,7vw,112px);
-  background:var(--petroleo);
-  display:flex;
-  align-items:center
-}
+.hero{min-height:calc(100vh - 132px);min-height:610px;position:relative;overflow:hidden;background:var(--creme);display:flex;align-items:center}
+.hero-inner{width:100%;max-width:1440px;margin:auto;padding:48px clamp(28px,7vw,112px) 44px;display:grid;grid-template-columns:minmax(0,1.13fr) minmax(270px,.66fr);align-items:center;gap:clamp(42px,8vw,136px);position:relative;z-index:2}
+.eyebrow,.section-kicker{margin:0;font-size:11px;line-height:1.45;font-weight:700;letter-spacing:.1em;text-transform:uppercase}
+.eyebrow{margin-bottom:18px;color:rgba(4,38,48,.53)}
+h1{max-width:690px;margin:0;font-size:clamp(42px,4.25vw,69px);line-height:.97}
+.hero-description{max-width:510px;margin:28px 0 26px;color:rgba(4,38,48,.67);font-size:16px;line-height:1.6}
+.primary-button,.top-button{display:inline-flex;align-items:center;justify-content:center;border-radius:999px;font-size:14px;font-weight:700;transition:transform .2s ease}
+.primary-button{min-height:52px;padding:14px 25px;background:var(--petroleo);color:var(--creme)}
+.primary-button:hover,.top-button:hover{transform:translateY(-2px)}
+.hero-photo{width:min(100%,320px);justify-self:center;position:relative;z-index:2}
+.hero-photo img{display:block;width:100%;height:auto;cursor:zoom-in}
+.hero-graphic{position:absolute;right:-55px;bottom:-55px;width:min(35vw,500px);z-index:1;pointer-events:none;clip-path:inset(38% 0 0 0)}
 
-.header-content{
-  width:100%;
-  max-width:1440px;
-  margin:auto;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  gap:32px
-}
+.section{padding:clamp(80px,10vw,140px) clamp(28px,7vw,112px)}
+.section-inner{width:100%;max-width:1440px;margin:auto}
 
-.brand{
-  width:220px;
-  height:76px;
-  display:flex;
-  align-items:center;
-  flex:0 0 auto
-}
-
-.brand img{
-  display:block;
-  width:100%;
-  height:auto;
-  max-width:none
-}
-
-.menu{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:flex-end;
-  gap:clamp(18px,2.4vw,40px)
-}
-
-.menu a{
-  color:var(--creme);
-  font-size:14px;
-  font-weight:700;
-  transition:color .22s ease,transform .22s ease
-}
-
-.menu a:hover,
-.menu a:focus-visible{
-  color:var(--verde);
-  transform:scale(1.07);
-  outline:none
-}
-
-.hero{
-  min-height:calc(100vh - 132px);
-  min-height:610px;
-  position:relative;
-  overflow:hidden;
-  background:var(--creme);
-  display:flex;
-  align-items:center
-}
-
-.hero-inner{
-  width:100%;
-  max-width:1440px;
-  margin:auto;
-  padding:48px clamp(28px,7vw,112px) 44px;
-  display:grid;
-  grid-template-columns:minmax(0,1.13fr) minmax(270px,.66fr);
-  align-items:center;
-  gap:clamp(42px,8vw,136px);
-  position:relative;
-  z-index:2
-}
-
-.eyebrow,
-.section-kicker{
-  margin:0;
-  font-size:11px;
-  line-height:1.45;
-  font-weight:700;
-  letter-spacing:.1em;
-  text-transform:uppercase
-}
-
-.eyebrow{
-  margin-bottom:18px;
-  color:rgba(4,38,48,.53)
-}
-
-h1{
-  max-width:690px;
-  margin:0;
-  font-size:clamp(42px,4.25vw,69px);
-  line-height:.97
-}
-
-.hero-description{
-  max-width:510px;
-  margin:28px 0 26px;
-  color:rgba(4,38,48,.67);
-  font-size:16px;
-  line-height:1.6
-}
-
-.primary-button,
-.top-button{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:999px;
-  font-size:14px;
-  font-weight:700;
-  transition:transform .2s ease
-}
-
-.primary-button{
-  min-height:52px;
-  padding:14px 25px;
-  background:var(--petroleo);
-  color:var(--creme)
-}
-
-.primary-button:hover,
-.top-button:hover{transform:translateY(-2px)}
-
-.hero-photo{
-  width:min(100%,320px);
-  justify-self:center;
-  position:relative;
-  z-index:2
-}
-
-.hero-photo img{
-  display:block;
-  width:100%;
-  height:auto;
-  cursor:zoom-in
-}
-
-.hero-graphic{
-  position:absolute;
-  right:-55px;
-  bottom:-55px;
-  width:min(35vw,500px);
-  z-index:1;
-  pointer-events:none;
-  clip-path:inset(38% 0 0 0)
-}
-
-.section{
-  padding:clamp(80px,10vw,140px) clamp(28px,7vw,112px)
-}
-
-.section-inner{
-  width:100%;
-  max-width:1440px;
-  margin:auto
-}
-
-/* SOBRE MIM */
-
-.about{
-  background:var(--petroleo);
-  color:var(--creme)
-}
-
-.about-grid{
-  display:grid;
-  grid-template-columns:minmax(250px,.7fr) minmax(400px,1.2fr);
-  gap:clamp(55px,10vw,160px);
-  align-items:start
-}
-
-.about-left{
-  display:flex;
-  flex-direction:column
-}
-
-.about .section-kicker{
-  margin-bottom:24px;
-  color:var(--verde)
-}
-
-.about h2{
-  max-width:450px;
-  margin:0;
-  color:var(--creme);
-  font-size:clamp(45px,4.5vw,68px);
-  line-height:.95
-}
-
-.about-image{
-  width:86%;
-  max-width:330px;
-  margin-top:50px;
-  display:block;
-  object-fit:cover;
-  cursor:zoom-in
-}
-
-.about-copy p{
-  margin:0 0 25px;
-  color:rgba(255,242,222,.87);
-  font-size:17px;
-  line-height:1.65
-}
-
+/* Sobre mim */
+.about{background:var(--petroleo);color:var(--creme)}
+.about-grid{display:grid;grid-template-columns:minmax(250px,.7fr) minmax(400px,1.2fr);gap:clamp(55px,10vw,160px);align-items:start}
+.about-left{display:flex;flex-direction:column}
+.about .section-kicker{margin-bottom:24px;color:var(--verde)}
+.about h2{max-width:450px;margin:0;color:var(--creme);font-size:clamp(45px,4.5vw,68px);line-height:.95}
+.about-image{width:min(100%,360px);margin-top:50px;display:block;object-fit:cover;cursor:zoom-in}
+.about-copy{padding-top:clamp(175px,15vw,220px)}
+.about-copy p{margin:0 0 25px;color:rgba(255,242,222,.87);font-size:17px;line-height:1.65}
 .about-copy p:last-child{margin-bottom:0}
 
-/* METODOLOGIA */
-
-.methodology{
-  background:var(--verde);
-  color:var(--petroleo-escuro)
-}
-
-.methodology-grid{
-  display:grid;
-  grid-template-columns:minmax(260px,.65fr) minmax(400px,1.2fr);
-  gap:clamp(55px,10vw,160px);
-  align-items:start
-}
-
-.methodology-left{
-  display:flex;
-  flex-direction:column
-}
-
-.methodology .section-kicker{
-  margin-bottom:24px;
-  color:rgba(4,38,48,.65)
-}
-
-.methodology h2{
-  max-width:450px;
-  margin:0;
-  color:var(--petroleo-escuro);
-  font-size:clamp(45px,4.5vw,68px);
-  line-height:.95
-}
-
-.methodology-image{
-  width:86%;
-  max-height:418px;
-  margin-top:50px;
-  display:block;
-  object-fit:cover;
-  object-position:center;
-  cursor:zoom-in
-}
-
-.methodology-copy p{
-  margin:0 0 25px;
-  color:rgba(4,38,48,.82);
-  font-size:17px;
-  line-height:1.65
-}
-
+/* Metodologia */
+.methodology{background:var(--verde);color:var(--petroleo-escuro)}
+.methodology-grid{display:grid;grid-template-columns:minmax(260px,.65fr) minmax(400px,1.2fr);gap:clamp(55px,10vw,160px);align-items:start}
+.methodology-left{display:flex;flex-direction:column}
+.methodology .section-kicker{margin-bottom:24px;color:rgba(4,38,48,.65)}
+.methodology h2{max-width:450px;margin:0;color:var(--petroleo-escuro);font-size:clamp(45px,4.5vw,68px);line-height:.95}
+.methodology-image{width:86%;max-height:418px;margin-top:50px;display:block;object-fit:cover;object-position:center;cursor:zoom-in}
+.methodology-copy p{margin:0 0 25px;color:rgba(4,38,48,.82);font-size:17px;line-height:1.65}
 .methodology-copy p:last-child{margin-bottom:0}
 
-/* PARA QUEM É */
-
-.audience{
-  background:var(--creme);
-  color:var(--petroleo-escuro)
-}
-
+/* Para quem é */
+.audience{background:var(--creme);color:var(--petroleo-escuro)}
 .section-intro{margin-bottom:68px}
-
-.section-intro .section-kicker{
-  margin-bottom:22px;
-  color:rgba(4,38,48,.65)
-}
-
-.section-intro h2{
-  max-width:790px;
-  margin:0 0 18px;
-  font-size:clamp(37px,4vw,62px);
-  line-height:.98
-}
-
-.audience-lead{
-  max-width:590px;
-  margin:0;
-  color:rgba(4,38,48,.78);
-  font-size:17px;
-  line-height:1.6
-}
-
-.audience-grid{
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:28px
-}
-
-.audience-card{
-  display:grid;
-  grid-template-rows:132px auto;
-  padding:30px 28px;
-  background:var(--verde);
-  border:1px solid var(--petroleo);
-  transition:transform .22s ease
-}
-
+.section-intro .section-kicker{margin-bottom:22px;color:rgba(4,38,48,.65)}
+.section-intro h2{max-width:790px;margin:0 0 18px;font-size:clamp(37px,4vw,62px);line-height:.98}
+.audience-lead{max-width:590px;margin:0;color:rgba(4,38,48,.78);font-size:17px;line-height:1.6}
+.audience-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:28px}
+.audience-card{display:grid;grid-template-rows:132px auto;padding:30px 28px;background:var(--petroleo);border:1px solid var(--petroleo-escuro);transition:transform .22s ease}
 .audience-card.reveal.visible:hover{transform:scale(1.03)}
+.audience-card h3{margin:0;color:var(--creme);font-size:26px;line-height:1.03}
+.audience-card p{margin:0;color:rgba(255,242,222,.84);font-size:15px;line-height:1.6}
 
-.audience-card h3{
-  margin:0;
-  font-size:26px;
-  line-height:1.03
-}
+/* Primeira consulta */
+.first-session{background:var(--petroleo);color:var(--creme)}
+.first-session .section-kicker{margin-bottom:26px;color:var(--verde)}
+.first-session h2{max-width:960px;margin:0 0 62px;color:var(--creme);font-size:clamp(37px,4vw,62px);line-height:.98}
+.consultation-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px}
+.consultation-item h3{margin:0 0 18px;color:var(--creme);font-size:31px;line-height:1}
+.consultation-item p{margin:0;color:rgba(255,242,222,.87);font-size:16px;line-height:1.65}
 
-.audience-card p{
-  margin:0;
-  color:rgba(4,38,48,.78);
-  font-size:15px;
-  line-height:1.6
-}
-
-/* PRIMEIRA CONSULTA */
-
-.first-session{
-  background:var(--petroleo);
-  color:var(--creme)
-}
-
-.first-session .section-kicker{
-  margin-bottom:26px;
-  color:var(--verde)
-}
-
-.first-session h2{
-  max-width:960px;
-  margin:0 0 62px;
-  color:var(--creme);
-  font-size:clamp(37px,4vw,62px);
-  line-height:.98
-}
-
-.consultation-grid{
-  display:grid;
-  grid-template-columns:repeat(3,minmax(0,1fr));
-  gap:48px
-}
-
-.consultation-item h3{
-  margin:0 0 18px;
-  color:var(--creme);
-  font-size:31px;
-  line-height:1
-}
-
-.consultation-item p{
-  margin:0;
-  color:rgba(255,242,222,.87);
-  font-size:16px;
-  line-height:1.65
-}
-
-/* CONTATO */
-
-.contact{
-  padding:clamp(78px,9vw,122px) 0 0;
-  background:var(--verde);
-  color:var(--petroleo-escuro);
-  position:relative;
-  overflow:hidden
-}
-
-.contact-inner,
-.site-footer{
-  position:relative;
-  z-index:2
-}
-
-.contact-inner{
-  width:100%;
-  max-width:1440px;
-  margin:auto;
-  padding:0 clamp(28px,7vw,112px)
-}
-
-.contact-columns{
-  display:grid;
-  grid-template-columns:minmax(440px,.9fr) minmax(360px,1fr);
-  gap:clamp(60px,11vw,180px)
-}
-
-.contact-kicker,
-.work-kicker{
-  color:rgba(4,38,48,.65)
-}
-
-.contact-layout{
-  display:grid;
-  grid-template-columns:180px minmax(0,1fr);
-  gap:28px;
-  align-items:start;
-  margin-top:34px
-}
-
-.contact-photo-column{
-  display:flex;
-  flex-direction:column;
-  align-items:flex-start;
-  gap:22px
-}
-
-.contact-photo{
-  display:block;
-  width:100%;
-  height:auto
-}
-
-.contact-title{
-  max-width:310px;
-  margin:0 0 22px;
-  font-size:clamp(42px,4.2vw,62px);
-  line-height:.92
-}
-
-.contact-subtitle{
-  margin:0;
-  color:rgba(4,38,48,.78);
-  font-size:17px;
-  font-weight:700
-}
-
-.top-button{
-  min-height:50px;
-  padding:13px 25px;
-  background:var(--petroleo);
-  color:var(--creme)
-}
-
+/* Contato */
+.contact{padding:clamp(78px,9vw,122px) 0 0;background:var(--verde);color:var(--petroleo-escuro);position:relative;overflow:hidden}
+.contact-inner,.site-footer{position:relative;z-index:2}
+.contact-inner{width:100%;max-width:1440px;margin:auto;padding:0 clamp(28px,7vw,112px)}
+.contact-columns{display:grid;grid-template-columns:minmax(440px,.9fr) minmax(360px,1fr);gap:clamp(60px,11vw,180px)}
+.contact-kicker,.work-kicker{color:rgba(4,38,48,.65)}
+.contact-layout{display:grid;grid-template-columns:180px minmax(0,1fr);grid-template-rows:auto auto;column-gap:28px;row-gap:22px;margin-top:34px;align-items:start}
+.contact-photo{grid-column:1;grid-row:1;display:block;width:100%;height:auto}
+.contact-title{grid-column:2;grid-row:1;max-width:310px;margin:0;font-size:clamp(42px,4.2vw,62px);line-height:.92}
+.top-button{grid-column:1;grid-row:2;justify-self:start;min-height:50px;padding:13px 25px;background:var(--petroleo);color:var(--creme)}
+.contact-subtitle{grid-column:2;grid-row:2;align-self:start;margin:0;color:rgba(4,38,48,.78);font-size:17px;font-weight:700}
 .work-copy{margin-top:34px}
+.work-copy p{margin:0 0 22px;color:rgba(4,38,48,.82);font-size:16px;line-height:1.62}
+.work-copy p:last-child{margin-bottom:0;color:var(--petroleo-escuro);font-weight:700}
 
-.work-copy p{
-  margin:0 0 22px;
-  color:rgba(4,38,48,.82);
-  font-size:16px;
-  line-height:1.62
-}
+.site-footer{width:100%;margin-top:68px;padding:26px clamp(28px,7vw,112px) 30px;background:var(--azul-claro);color:var(--petroleo-escuro)}
+.site-footer-content{width:100%;max-width:1440px;margin:auto}
+.site-footer p{max-width:850px;margin:0 0 6px;font-size:12px;font-weight:700;line-height:1.6}
 
-.work-copy p:last-child{
-  margin-bottom:0;
-  color:var(--petroleo-escuro);
-  font-weight:700
-}
-
-.site-footer{
-  width:100%;
-  margin-top:68px;
-  padding:26px clamp(28px,7vw,112px) 30px;
-  background:var(--azul-claro);
-  color:var(--petroleo-escuro)
-}
-
-.site-footer-content{
-  width:100%;
-  max-width:1440px;
-  margin:auto
-}
-
-.site-footer p{
-  max-width:850px;
-  margin:0 0 6px;
-  font-size:12px;
-  font-weight:700;
-  line-height:1.6
-}
-
-.reveal{
-  opacity:0;
-  transform:translateY(20px);
-  transition:opacity .75s ease,transform .75s ease
-}
-
-.reveal.visible{
-  opacity:1;
-  transform:translateY(0)
-}
-
-.image-modal{
-  display:none;
-  position:fixed;
-  inset:0;
-  z-index:100;
-  align-items:center;
-  justify-content:center;
-  padding:30px;
-  background:rgba(4,38,48,.92);
-  cursor:zoom-out
-}
-
+.reveal{opacity:0;transform:translateY(20px);transition:opacity .75s ease,transform .75s ease}
+.reveal.visible{opacity:1;transform:translateY(0)}
+.image-modal{display:none;position:fixed;inset:0;z-index:100;align-items:center;justify-content:center;padding:30px;background:rgba(4,38,48,.92);cursor:zoom-out}
 .image-modal.active{display:flex}
-
-.image-modal img{
-  max-width:min(90vw,800px);
-  max-height:88vh;
-  object-fit:contain;
-  cursor:default
-}
-
-.modal-close{
-  position:fixed;
-  top:18px;
-  right:26px;
-  border:0;
-  background:transparent;
-  color:var(--creme);
-  font-size:42px;
-  line-height:1;
-  cursor:pointer
-}
+.image-modal img{max-width:min(90vw,800px);max-height:88vh;object-fit:contain;cursor:default}
+.modal-close{position:fixed;top:18px;right:26px;border:0;background:transparent;color:var(--creme);font-size:42px;line-height:1;cursor:pointer}
 
 @media(max-width:1000px){
   .audience-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
-
-  .about-grid,
-  .methodology-grid{
-    grid-template-columns:minmax(210px,.65fr) minmax(390px,1.2fr);
-    gap:48px
-  }
-
-  .contact-columns{
-    grid-template-columns:minmax(390px,.9fr) minmax(330px,1fr)
-  }
+  .about-grid,.methodology-grid{grid-template-columns:minmax(210px,.65fr) minmax(390px,1.2fr);gap:48px}
+  .contact-columns{grid-template-columns:minmax(390px,.9fr) minmax(330px,1fr)}
 }
 
 @media(max-width:760px){
-  .site-header{
-    padding-top:14px;
-    padding-bottom:14px
-  }
-
-  .header-content{
-    flex-direction:column;
-    align-items:center;
-    gap:16px
-  }
-
-  .brand{
-    width:220px;
-    align-self:center
-  }
-
-  .menu{
-    width:100%;
-    flex-wrap:nowrap;
-    justify-content:center;
-    gap:16px
-  }
-
-  .menu a{
-    font-size:12.5px;
-    font-weight:400;
-    white-space:nowrap
-  }
-
+  .site-header{padding-top:14px;padding-bottom:14px}
+  .header-content{flex-direction:column;align-items:center;gap:16px}
+  .brand{width:220px;align-self:center}
+  .menu{width:100%;flex-wrap:nowrap;justify-content:center;gap:16px}
+  .menu a{font-size:12.5px;font-weight:400;white-space:nowrap}
   .hero{min-height:auto}
-
-  .hero-inner{
-    grid-template-columns:1fr;
-    padding-top:58px;
-    padding-bottom:70px
-  }
-
+  .hero-inner{grid-template-columns:1fr;padding-top:58px;padding-bottom:70px}
   h1{font-size:clamp(42px,12vw,58px)}
-
   .eyebrow{font-weight:400}
-
-  .hero-photo{
-    width:min(100%,300px);
-    justify-self:start
-  }
-
-  .hero-graphic{
-    width:68vw;
-    right:-48px;
-    bottom:-44px
-  }
-
-  .about-grid,
-  .methodology-grid,
-  .audience-grid,
-  .consultation-grid,
-  .contact-columns{
-    grid-template-columns:1fr;
-    gap:38px
-  }
-
-  .about-image,
-  .methodology-image{
-    width:100%;
-    max-width:300px;
-    max-height:none
-  }
-
-  .audience-card{
-    grid-template-rows:auto;
-    gap:14px
-  }
-
+  .hero-photo{width:min(100%,300px);justify-self:start}
+  .hero-graphic{width:68vw;right:-48px;bottom:-44px}
+  .about-grid,.methodology-grid,.audience-grid,.consultation-grid,.contact-columns{grid-template-columns:1fr;gap:38px}
+  .about-image,.methodology-image{width:100%;max-width:300px;max-height:none}
+  .about-copy{padding-top:0}
+  .audience-card{grid-template-rows:auto;gap:14px}
   .section-intro{margin-bottom:48px}
   .first-session h2{margin-bottom:48px}
-
-  .contact-layout{
-    grid-template-columns:125px minmax(0,1fr);
-    gap:20px
-  }
-
-  .contact-photo-column{gap:16px}
-
-  .contact-title{
-    font-size:clamp(34px,9vw,44px)
-  }
-
+  .contact-layout{grid-template-columns:125px minmax(0,1fr);column-gap:20px;row-gap:16px}
+  .contact-title{font-size:clamp(34px,9vw,44px)}
   .work-copy{margin-top:28px}
   .work-content{order:-1}
 }
@@ -664,10 +144,10 @@ h1{
     </a>
 
     <nav class="menu">
+      <a href="#sobre-mim">Sobre mim</a>
       <a href="#metodologia">Metodologia</a>
       <a href="#para-quem-e">Para quem é</a>
       <a href="#primeira-consulta">Primeira consulta</a>
-      <a href="#sobre-mim">Sobre mim</a>
     </nav>
   </div>
 </header>
@@ -815,15 +295,13 @@ h1{
           <p class="section-kicker contact-kicker">Contato</p>
 
           <div class="contact-layout">
-            <div class="contact-photo-column">
-              <img class="contact-photo" src="photo-output.jpg" alt="Vanessa Cassarotti">
-              <a class="top-button" href="#inicio">Voltar ao topo</a>
-            </div>
+            <img class="contact-photo" src="photo-output.jpg" alt="Vanessa Cassarotti">
 
-            <div>
-              <h2 class="contact-title">Agende<br>uma<br>conversa<br>inicial<br>comigo.</h2>
-              <p class="contact-subtitle">Atendimento presencial em São Paulo e online</p>
-            </div>
+            <h2 class="contact-title">Agende<br>uma<br>conversa<br>inicial<br>comigo.</h2>
+
+            <a class="top-button" href="#inicio">Voltar ao topo</a>
+
+            <p class="contact-subtitle">Atendimento presencial em São Paulo e online</p>
           </div>
         </div>
 
